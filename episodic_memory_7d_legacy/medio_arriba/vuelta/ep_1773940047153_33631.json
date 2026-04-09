@@ -1,0 +1,97 @@
+{
+    "duration_s": 49.69200134277344,
+    "end_ts_ms": "1773940096845",
+    "episode_id": "ep_1773940047153_33631",
+    "mission": {
+        "controller_version": "ainf_slamo_v2",
+        "furniture_hash": "",
+        "map_layout_id": "",
+        "mission_type": "goto_point",
+        "robot_context": ""
+    },
+    "mood_snapshot": {
+        "enable_mood": 1,
+        "mood": 0.5,
+        "mood_caution_gain": 0.30000001192092896,
+        "mood_reactivity_gain": 0.3499999940395355,
+        "mood_speed_gain": 0.3499999940395355
+    },
+    "outcome": {
+        "comfort_jerk_score": 0.6128777265548706,
+        "composite_score": 50.30799865722656,
+        "efficiency_score": 1.0426615476608276,
+        "safety_score": 0.30000001192092896,
+        "success_binary": 1,
+        "time_to_goal_s": 49.69200134277344
+    },
+    "params_snapshot": {
+        "carrot_lookahead": 2,
+        "d_safe": 0.3499999940395355,
+        "gauss_k": 0.5,
+        "goal_threshold": 0.25,
+        "lambda_delta_vel": 0.18000000715255737,
+        "lambda_goal": 5,
+        "lambda_obstacle": 8,
+        "lambda_smooth": 0.10000000149011612,
+        "lambda_velocity": 0.009999999776482582,
+        "max_adv": 0.800000011920929,
+        "max_back_adv": 0.20000000298023224,
+        "max_rot": 0.699999988079071,
+        "mood": 0.5,
+        "mppi_lambda": 8,
+        "noise_alpha": 0.800000011920929,
+        "num_samples": 100,
+        "optim_iterations": 0,
+        "optim_lr": 0.05000000074505806,
+        "safety_priority_scale": 1,
+        "sigma_adv": 0.11999999731779099,
+        "sigma_rot": 0.15000000596046448,
+        "trajectory_dt": 0.10000000149011612,
+        "trajectory_steps": 50,
+        "velocity_smoothing": 0.6000000238418579,
+        "warm_start_adv_weight": 0.5,
+        "warm_start_rot_weight": 0.30000001192092896
+    },
+    "replay": {
+        "counterfactual_trials": [
+        ],
+        "local_sensitivity": {
+        },
+        "replay_set_id": "",
+        "replayed": false
+    },
+    "safety": {
+        "blocked_time_s": 0,
+        "min_esdf_m": 0.30000001192092896,
+        "n_blocked_events": 0,
+        "n_collision": 0,
+        "n_near_collision": 0,
+        "n_replans": 0
+    },
+    "source": {
+        "obstacle_density": 0.645034909248352,
+        "x": -0.7467519640922546,
+        "y": 1.8816063404083252
+    },
+    "start_ts_ms": "1773940047153",
+    "status": "success",
+    "target": {
+        "target_mode": "point",
+        "target_object_id": "",
+        "target_x": -0.37819239497184753,
+        "target_y": 25.868358612060547
+    },
+    "trajectory": {
+        "distance_traveled_m": 23.008024215698242,
+        "mean_cpu_pct": 270.8028869628906,
+        "mean_ess_ratio": 0.3071969151496887,
+        "mean_rot": 0.2298329472541809,
+        "mean_speed": 0.5253162384033203,
+        "n_cycles": 754,
+        "p05_ess_ratio": 0.13660404086112976,
+        "p95_mppi_ms": 1.785351037979126,
+        "p95_rot": 0.6128777265548706,
+        "p95_speed": 0.7105579376220703,
+        "path_efficiency": 1.0426615476608276
+    }
+}

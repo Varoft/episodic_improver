@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "created_at": "2026-04-09T17:57:18.102125",
+    "updated_at": "2026-04-09T17:57:18.102897",
+    "total_missions": 2,
+    "improvements": 2,
+    "failures": 0
+  },
+  "improvements": [
+    {
+      "timestamp": "2026-04-09T17:57:18.102395",
+      "type": "improvement",
+      "episode_id": "prueba_ep_001",
+      "best_match_id": "ep_1773938016714_804399",
+      "similarity_score": 0.670612045989204,
+      "improvement": {
+        "delta": 57.5,
+        "from": 0.0,
+        "to": 57.5
+      },
+      "perturbation": {
+        "parameter": "accel_limit"
+      },
+      "query_fingerprint_7d": [
+        0.125,
+        0.1875,
+        0.20483276469913345,
+        0.44194173824159216,
+        1.1,
+        0.45,
+        0.49500000000000005
+      ],
+      "metadata": {
+        "success": true,
+        "collisions": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-09T17:57:18.102874",
+      "type": "improvement",
+      "episode_id": "prueba_ep_002",
+      "best_match_id": "ep_1773935103784_463465",
+      "similarity_score": 0.44392632254749476,
+      "improvement": {
+        "delta": 9.5,
+        "from": 0.0,
+        "to": 9.5
+      },
+      "perturbation": {
+        "parameter": "angular_velocity"
+      },
+      "query_fingerprint_7d": [
+        0.25,
+        0.3125,
+        0.19440011221421477,
+        0.5394586406760021,
+        1.3107710728304647,
+        0.75,
+        0.9830783046228485
+      ],
+      "metadata": {
+        "success": true,
+        "collisions": 1
+      }
+    }
+  ],
+  "failures": []
+}

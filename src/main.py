@@ -102,12 +102,26 @@ class EpisodicImproverComponent:
         )
         self.engine = RecommendationEngine(engine_config)
         
+        # Try to enable 7D episodic improver system
+        index_7d_path = self.episodic_memory_dir / "fingerprints_index_unified_7d.json"
+        if index_7d_path.exists():
+            if self.engine.enable_7d_system(index_7d_path):
+                self.use_7d_system = True
+                logger.info(f"✓ 7D system enabled with index: {index_7d_path}")
+            else:
+                self.use_7d_system = False
+                logger.warning("7D system failed to initialize, using standard engine")
+        else:
+            self.use_7d_system = False
+            logger.info(f"7D index not found at {index_7d_path}, using standard engine")
+        
         logger.info(
             f"EpisodicImproverComponent initialized:\n"
             f"  episodic_memory: {self.episodic_memory_dir}\n"
             f"  etc: {self.etc_dir}\n"
             f"  index: {self.index_file}\n"
             f"  episodes in index: {self.engine.get_episode_count()}\n"
+            f"  7D system: {'ENABLED' if self.use_7d_system else 'DISABLED'}\n"
             f"  config: outcome_quality_threshold={config.fingerprint.outcome_quality_threshold}, "
             f"k_neighbors={config.fingerprint.k_neighbors}"
         )
@@ -123,6 +137,7 @@ class EpisodicImproverComponent:
         self.monitor = DirectoryMonitor(monitor_config)
         self.monitor.register_episode_callback(self._on_episode_detected)
         self.monitor.register_query_callback(self._on_query_detected)
+        self.monitor.register_mission_callback(self._on_mission_initial_detected)
         
         logger.info("Component initialized successfully")
     
@@ -204,12 +219,18 @@ class EpisodicImproverComponent:
                 obstacle_density=mission_data.get("obstacle_density", 0.0),
             )
             
-            # Generate recommendations
-            logger.info(f"Generating recommendations for query {query_id}...")
-            recommendations = self.engine.generate_recommendations(
-                query_id=query_id,
-                mission_spec=mission_spec
-            )
+            # Generate recommendations using 7D system if available, otherwise fall back
+            logger.info(f"Generating recommendations for query {query_id}... (using {'7D' if self.use_7d_system else 'standard'} engine)")
+            if self.use_7d_system:
+                recommendations = self.engine.generate_recommendations_7d(
+                    query_id=query_id,
+                    mission_spec=mission_spec
+                )
+            else:
+                recommendations = self.engine.generate_recommendations(
+                    query_id=query_id,
+                    mission_spec=mission_spec
+                )
             
             # Save recommendations
             self.monitor.save_recommendation(
@@ -232,6 +253,138 @@ class EpisodicImproverComponent:
         
         except Exception as e:
             logger.error(f"✗ Failed to process query {query_path.name}: {e}")
+    
+    def _on_mission_initial_detected(self, mission_path: Path) -> None:
+        """
+        Callback when mission_initial.json is detected (MISIÓN INICIANDO).
+        
+        Detects mission start and applies 7D prediction to control parameters.
+        
+        Args:
+            mission_path: Path to mission_initial.json file.
+        """
+        logger.info(f"Mission starting: {mission_path.name}")
+        
+        try:
+            # Load mission initial data
+            with open(mission_path, 'r') as f:
+                mission_data = json.load(f)
+            
+            mission_id = mission_data.get("mission_id", f"mission_{int(time.time() * 1000)}")
+            
+            # Extract mission spec for 7D fingerprinting
+            mission_spec = MissionSpec(
+                start_x=mission_data.get("start_x", 0.0),
+                start_y=mission_data.get("start_y", 0.0),
+                end_x=mission_data.get("end_x", 0.0),
+                end_y=mission_data.get("end_y", 0.0),
+                estimated_distance=mission_data.get("estimated_distance", 0.0),
+                obstacle_density=mission_data.get("obstacle_density", 0.0),
+            )
+            
+            logger.info(f"Applying 7D prediction for {mission_id}...")
+            
+            # Generate 7D recommendations (PRE-MISIÓN)
+            if self.use_7d_system:
+                prediction = self.engine.generate_recommendations_7d(
+                    query_id=mission_id,
+                    mission_spec=mission_spec
+                )
+                
+                if prediction.get('status') == 'success':
+                    # Extract predicted control parameters
+                    predicted_params = prediction.get('predicted_parameters', {})
+                    best_match_id = prediction.get('best_match_id', 'unknown')
+                    similarity = prediction.get('best_match_similarity', 0.0)
+                    
+                    # Update mission_initial.json with predicted parameters
+                    mission_data['control_params'] = predicted_params
+                    mission_data['predicted_from_episode'] = best_match_id
+                    mission_data['similarity_score'] = similarity
+                    
+                    # Save updated mission file
+                    with open(mission_path, 'w') as f:
+                        json.dump(mission_data, f, indent=2)
+                    
+                    logger.info(
+                        f"✓ 7D prediction applied:\n"
+                        f"  Best match: {best_match_id}\n"
+                        f"  Similarity: {similarity:.1%}\n"
+                        f"  Params file updated: {mission_path.name}"
+                    )
+                else:
+                    logger.warning(
+                        f"7D prediction failed ({prediction.get('status')}), "
+                        f"mission will use default parameters"
+                    )
+            else:
+                logger.warning("7D system not available, using default parameters")
+        
+        except Exception as e:
+            logger.error(f"✗ Failed to process mission start {mission_path.name}: {e}")
+            import traceback
+            traceback.print_exc()
+    
+    def save_episode(self, mission_data: dict) -> bool:
+        """
+        Save completed mission as episode in episodic memory.
+        
+        Called after SLAMO completes a mission. Takes mission_initial.json data
+        (now with results) and saves as episode for future reference.
+        
+        Args:
+            mission_data: Complete mission data dict including:
+                - mission_id: str
+                - start_x, start_y, end_x, end_y: float
+                - obstacle_density, estimated_distance: float
+                - control_params: dict with parameters used
+                - success: bool
+                - time_to_goal_s: float
+                - collisions: int
+                - composite_score: float
+                - etc.
+        
+        Returns:
+            True if saved successfully, False otherwise.
+        """
+        try:
+            mission_id = mission_data.get('mission_id', f'ep_{int(time.time() * 1000)}')
+            
+            # Create episode data structure
+            episode = {
+                'mission_id': mission_id,
+                'timestamp_ms': int(time.time() * 1000),
+                'mission_spec': {
+                    'start_x': mission_data.get('start_x'),
+                    'start_y': mission_data.get('start_y'),
+                    'end_x': mission_data.get('end_x'),
+                    'end_y': mission_data.get('end_y'),
+                    'estimated_distance': mission_data.get('estimated_distance'),
+                    'obstacle_density': mission_data.get('obstacle_density'),
+                },
+                'control_params': mission_data.get('control_params', {}),
+                'predicted_from_episode': mission_data.get('predicted_from_episode'),
+                'similarity_score': mission_data.get('similarity_score'),
+                'mission_outcome': {
+                    'success': mission_data.get('success'),
+                    'time_to_goal_s': mission_data.get('time_to_goal_s'),
+                    'collisions': mission_data.get('collisions', 0),
+                    'blocked_time_s': mission_data.get('blocked_time_s', 0),
+                    'composite_score': mission_data.get('composite_score'),
+                },
+            }
+            
+            # Save episode
+            episode_path = self.episodic_memory_dir / f"{mission_id}.json"
+            with open(episode_path, 'w') as f:
+                json.dump(episode, f, indent=2)
+            
+            logger.info(f"✓ Episode saved: {episode_path.name}")
+            return True
+        
+        except Exception as e:
+            logger.error(f"✗ Failed to save episode: {e}")
+            return False
     
     def start(self) -> None:
         """Start the component."""

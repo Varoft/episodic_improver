@@ -1,0 +1,3676 @@
+[
+  {
+    "timestamp": "2026-03-26T19:11:23.134380",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/ida/ep_1773942011982_795368.json",
+    "fingerprint_7d": [
+      -0.0013339632190763951,
+      0.31793334484100344,
+      -0.5114065456580782,
+      0.2162604341209155,
+      0.9153473396697923,
+      0.3222191333770752,
+      0.29494242652741176
+    ],
+    "category": "ida",
+    "score": 145.9056324791908,
+    "best_candidate_score": 155.34635404798468,
+    "similar_episodes": [
+      "ida/ep_1773942011982_795368.json",
+      "ida/ep_1773941664614_501073.json",
+      "ida/ep_1773940098130_674340.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.135371",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/ida/ep_1773940821738_341771.json",
+    "fingerprint_7d": [
+      0.00029956300277262927,
+      0.3238616228103638,
+      -0.5052794211275046,
+      0.21432599599870203,
+      0.922023358196353,
+      0.4083763360977173,
+      0.3765325208167398
+    ],
+    "category": "ida",
+    "score": 145.71391364336014,
+    "best_candidate_score": 155.07057943940234,
+    "similar_episodes": [
+      "ida/ep_1773940821738_341771.json",
+      "ida/ep_1773941915431_914975.json",
+      "ida/ep_1773941804132_769262.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.136556",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/ida/ep_1773941350411_346929.json",
+    "fingerprint_7d": [
+      -0.00783177763223648,
+      0.3272976875305176,
+      -0.49509975741218204,
+      0.22945593544270665,
+      0.9208156622464471,
+      0.42146968841552734,
+      0.3880958902551475
+    ],
+    "category": "ida",
+    "score": 145.68181490182877,
+    "best_candidate_score": 152.75905244418618,
+    "similar_episodes": [
+      "ida/ep_1773941350411_346929.json",
+      "ida/ep_1773940239655_957939.json",
+      "ida/ep_1773940098130_674340.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.145116",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/ida/ep_1773941915431_914975.json",
+    "fingerprint_7d": [
+      -0.003555210307240486,
+      0.32541327476501464,
+      -0.5032007866370589,
+      0.21540459115646746,
+      0.9050773538040223,
+      0.40591031312942505,
+      0.3673802320889421
+    ],
+    "category": "ida",
+    "score": 146.3422649884224,
+    "best_candidate_score": 153.85196078570755,
+    "similar_episodes": [
+      "ida/ep_1773941915431_914975.json",
+      "ida/ep_1773940098130_674340.json",
+      "ida/ep_1773940821738_341771.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.146037",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/ida/ep_1773940098130_674340.json",
+    "fingerprint_7d": [
+      -0.0059510540217161175,
+      0.32203965187072753,
+      -0.49971844048131203,
+      0.22236806039447327,
+      0.9203577486080946,
+      0.38569366931915283,
+      0.35497615714697045
+    ],
+    "category": "ida",
+    "score": 145.76365141630174,
+    "best_candidate_score": 148.84649514221468,
+    "similar_episodes": [
+      "ida/ep_1773940098130_674340.json",
+      "ida/ep_1773941664614_501073.json",
+      "ida/ep_1773941915431_914975.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.146957",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/ida/ep_1773940469988_45118.json",
+    "fingerprint_7d": [
+      0.0019603295251727102,
+      -0.30349295139312743,
+      0.517682551966389,
+      0.22966443222195113,
+      0.9317261386984884,
+      0.2621167302131653,
+      0.2442210089297859
+    ],
+    "category": "ida",
+    "score": 137.79396691322327,
+    "best_candidate_score": 145.7887236955147,
+    "similar_episodes": [
+      "ida/ep_1773940469988_45118.json",
+      "vuelta/ep_1773938770320_333445.json",
+      "vuelta/ep_1773941479775_270669.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.147888",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/ida/ep_1773940344533_987158.json",
+    "fingerprint_7d": [
+      -0.012384796142578125,
+      0.3257080078125,
+      -0.498951086392609,
+      0.22295743538564264,
+      0.9253906763143591,
+      0.4312605857849121,
+      0.39908452514722653
+    ],
+    "category": "ida",
+    "score": 145.54185448408126,
+    "best_candidate_score": 149.91950112422901,
+    "similar_episodes": [
+      "ida/ep_1773940344533_987158.json",
+      "ida/ep_1773940239655_957939.json",
+      "ida/ep_1773941350411_346929.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.148833",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/ida/ep_1773941804132_769262.json",
+    "fingerprint_7d": [
+      0.0022774837911129,
+      0.326541805267334,
+      -0.5140009560395657,
+      0.21907780790426987,
+      0.9724774251985826,
+      0.4605525732040405,
+      0.44787698055804703
+    ],
+    "category": "ida",
+    "score": 143.9510139679909,
+    "best_candidate_score": 153.532270795841,
+    "similar_episodes": [
+      "ida/ep_1773941804132_769262.json",
+      "ida/ep_1773940821738_341771.json",
+      "ida/ep_1773941915431_914975.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.149865",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/ida/ep_1773940653330_936839.json",
+    "fingerprint_7d": [
+      0.010363928973674774,
+      0.3181949853897095,
+      -0.5234179388500653,
+      0.20884887356150153,
+      0.9508319766135199,
+      0.4733359217643738,
+      0.4500629300934019
+    ],
+    "category": "ida",
+    "score": 142.21653833687304,
+    "best_candidate_score": 149.84850176061394,
+    "similar_episodes": [
+      "ida/ep_1773940653330_936839.json",
+      "ida/ep_1773941804132_769262.json",
+      "ida/ep_1773940821738_341771.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.150987",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/ida/ep_1773941232298_240084.json",
+    "fingerprint_7d": [
+      0.006230721995234489,
+      -0.3321372032165527,
+      0.5104683391687947,
+      0.23565245073497998,
+      0.9660496632985417,
+      0.18889331817626953,
+      0.1824803264235295
+    ],
+    "category": "ida",
+    "score": 137.91449418500065,
+    "best_candidate_score": 147.09647137139999,
+    "similar_episodes": [
+      "ida/ep_1773941232298_240084.json",
+      "vuelta/ep_1773941479775_270669.json",
+      "ida/ep_1773940304698_420881.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.152240",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/ida/ep_1773939908340_155602.json",
+    "fingerprint_7d": [
+      -0.018975964188575743,
+      0.329351806640625,
+      -0.4881110900237634,
+      0.21576255773134415,
+      0.9594174857723652,
+      0.4766247272491455,
+      0.4572820974743145
+    ],
+    "category": "ida",
+    "score": 144.42299740552903,
+    "best_candidate_score": 154.41857472588413,
+    "similar_episodes": [
+      "ida/ep_1773939908340_155602.json",
+      "ida/ep_1773940344533_987158.json",
+      "ida/ep_1773940239655_957939.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.153489",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/ida/ep_1773941664614_501073.json",
+    "fingerprint_7d": [
+      -0.005003064870834351,
+      0.3139634609222412,
+      -0.5086856124021223,
+      0.21339390171455866,
+      0.9334516255043119,
+      0.3676148056983948,
+      0.3431506379386184
+    ],
+    "category": "ida",
+    "score": 145.30215152025224,
+    "best_candidate_score": 153.35030996426397,
+    "similar_episodes": [
+      "ida/ep_1773941664614_501073.json",
+      "ida/ep_1773940098130_674340.json",
+      "ida/ep_1773941915431_914975.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.154822",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/ida/ep_1773941452770_730543.json",
+    "fingerprint_7d": [
+      0.0200021892786026,
+      0.33411369323730467,
+      -0.5235507690481105,
+      0.2275167102006285,
+      0.9276147914476413,
+      0.5754122734069824,
+      0.5337609359928311
+    ],
+    "category": "ida",
+    "score": 145.44874928712844,
+    "best_candidate_score": 148.94087645999323,
+    "similar_episodes": [
+      "ida/ep_1773941452770_730543.json",
+      "ida/ep_1773940653330_936839.json",
+      "ida/ep_1773941136014_412170.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.156425",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/ida/ep_1773940239655_957939.json",
+    "fingerprint_7d": [
+      -0.008499807119369507,
+      0.32575762271881104,
+      -0.49812347118474715,
+      0.2256694532614759,
+      0.9145728788775785,
+      0.4240313172340393,
+      0.3878075425369871
+    ],
+    "category": "ida",
+    "score": 145.9355913424492,
+    "best_candidate_score": 151.49308046673798,
+    "similar_episodes": [
+      "ida/ep_1773940239655_957939.json",
+      "ida/ep_1773941350411_346929.json",
+      "ida/ep_1773940344533_987158.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.157725",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/vuelta/ep_1773940047153_33631.json",
+    "fingerprint_7d": [
+      -0.009334399551153182,
+      0.023520079255104066,
+      0.4951095120258046,
+      0.21203996540628903,
+      0.9590839345693216,
+      0.645034909248352,
+      0.6186426186964747
+    ],
+    "category": "vuelta",
+    "score": 144.41170397996902,
+    "best_candidate_score": 153.9272564174447,
+    "similar_episodes": [
+      "vuelta/ep_1773940047153_33631.json",
+      "vuelta/ep_1773941963492_790605.json",
+      "vuelta/ep_1773940730707_10738.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.159246",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/vuelta/ep_1773941402564_470943.json",
+    "fingerprint_7d": [
+      -0.003241236507892609,
+      0.004860512912273407,
+      0.47697110432216144,
+      0.2351842585895508,
+      0.9167344517110549,
+      0.5708866119384766,
+      0.5233514251846011
+    ],
+    "category": "vuelta",
+    "score": 145.76018439531327,
+    "best_candidate_score": 152.89049492092505,
+    "similar_episodes": [
+      "vuelta/ep_1773941402564_470943.json",
+      "vuelta/ep_1773941302278_336260.json",
+      "vuelta/ep_1773940290567_838747.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.160801",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/vuelta/ep_1773940187568_207469.json",
+    "fingerprint_7d": [
+      -0.005890633165836334,
+      0.00870126336812973,
+      0.501667590064354,
+      0.22583930882413664,
+      0.9185351481895009,
+      0.5948441624641418,
+      0.5463852709186601
+    ],
+    "category": "vuelta",
+    "score": 145.8223758482933,
+    "best_candidate_score": 154.04257572000722,
+    "similar_episodes": [
+      "vuelta/ep_1773940187568_207469.json",
+      "vuelta/ep_1773940290567_838747.json",
+      "vuelta/ep_1773941302278_336260.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.162362",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/vuelta/ep_1773940730707_10738.json",
+    "fingerprint_7d": [
+      -0.009777061641216278,
+      0.019881215691566468,
+      0.4888274748854846,
+      0.21605819782246777,
+      0.9228835418813768,
+      0.6300769448280334,
+      0.5814876425006923
+    ],
+    "category": "vuelta",
+    "score": 145.36223243474961,
+    "best_candidate_score": 151.8664149287567,
+    "similar_episodes": [
+      "vuelta/ep_1773940730707_10738.json",
+      "vuelta/ep_1773941963492_790605.json",
+      "vuelta/ep_1773940047153_33631.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.163684",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/vuelta/ep_1773941543467_229945.json",
+    "fingerprint_7d": [
+      -0.003457716852426529,
+      0.009763512760400772,
+      0.5003382645634951,
+      0.21572542103405418,
+      0.936286021295564,
+      0.6149324178695679,
+      0.5757526268927589
+    ],
+    "category": "vuelta",
+    "score": 144.8575491976738,
+    "best_candidate_score": 153.90106598264137,
+    "similar_episodes": [
+      "vuelta/ep_1773941543467_229945.json",
+      "vuelta/ep_1773940187568_207469.json",
+      "vuelta/ep_1773941302278_336260.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.165184",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/vuelta/ep_1773940418537_762964.json",
+    "fingerprint_7d": [
+      -0.011742492020130158,
+      0.011589051783084869,
+      -0.487265569214245,
+      0.22431777779266918,
+      0.9456990476813547,
+      0.6352579593658447,
+      0.6007628472042801
+    ],
+    "category": "vuelta",
+    "score": 140.4762923872471,
+    "best_candidate_score": 148.3517087916512,
+    "similar_episodes": [
+      "vuelta/ep_1773940418537_762964.json",
+      "ida/ep_1773938937709_145232.json",
+      "ida/ep_1773939040401_705080.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.166724",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/vuelta/ep_1773941861790_780364.json",
+    "fingerprint_7d": [
+      -0.012016268819570542,
+      0.01834363639354706,
+      0.4905400347931415,
+      0.21844593513522953,
+      0.9210432957738519,
+      0.6368519067764282,
+      0.5865681791372234
+    ],
+    "category": "vuelta",
+    "score": 145.70671877145767,
+    "best_candidate_score": 152.16571844259838,
+    "similar_episodes": [
+      "vuelta/ep_1773941861790_780364.json",
+      "vuelta/ep_1773941750434_95825.json",
+      "vuelta/ep_1773940730707_10738.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.168251",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/vuelta/ep_1773940290567_838747.json",
+    "fingerprint_7d": [
+      -0.006562586128711701,
+      0.00826391503214836,
+      0.5047743880264545,
+      0.22550227721276087,
+      0.9228380757100912,
+      0.5816569924354553,
+      0.5367752196224547
+    ],
+    "category": "vuelta",
+    "score": 145.57844714403151,
+    "best_candidate_score": 153.933046612431,
+    "similar_episodes": [
+      "vuelta/ep_1773940290567_838747.json",
+      "vuelta/ep_1773940187568_207469.json",
+      "vuelta/ep_1773941302278_336260.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.169706",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/vuelta/ep_1773941062671_168440.json",
+    "fingerprint_7d": [
+      0.006291339546442032,
+      0.007724194973707199,
+      -0.5005764914565624,
+      0.24146249336650855,
+      0.9414531260785228,
+      0.6419569849967957,
+      0.6043724103331767
+    ],
+    "category": "vuelta",
+    "score": 143.3839237546921,
+    "best_candidate_score": 153.2258458234033,
+    "similar_episodes": [
+      "vuelta/ep_1773941062671_168440.json",
+      "ida/ep_1773941536814_594980.json",
+      "ida/ep_1773941297640_78804.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.171374",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/vuelta/ep_1773939833624_956635.json",
+    "fingerprint_7d": [
+      -0.021740791201591492,
+      -0.05698120594024658,
+      0.4973633327554487,
+      0.2738090781217362,
+      0.8180785483684262,
+      0.5811130404472351,
+      0.4753961125670366
+    ],
+    "category": "vuelta",
+    "score": 147.57368022203445,
+    "best_candidate_score": 156.92059242271287,
+    "similar_episodes": [
+      "vuelta/ep_1773939833624_956635.json",
+      "vuelta/ep_1773941750434_95825.json",
+      "vuelta/ep_1773940608644_291697.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.172942",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/vuelta/ep_1773940608644_291697.json",
+    "fingerprint_7d": [
+      -0.015209993720054627,
+      0.018596984446048737,
+      0.47280980291618646,
+      0.21225867842569307,
+      0.9197496393670532,
+      0.6081671714782715,
+      0.559361536642021
+    ],
+    "category": "vuelta",
+    "score": 141.51035595536231,
+    "best_candidate_score": 147.55495138365964,
+    "similar_episodes": [
+      "vuelta/ep_1773940608644_291697.json",
+      "vuelta/ep_1773941750434_95825.json",
+      "vuelta/ep_1773941861790_780364.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.174504",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/vuelta/ep_1773941302278_336260.json",
+    "fingerprint_7d": [
+      -0.003481411188840866,
+      0.00105483066290617,
+      0.5030444428513625,
+      0.23192221200939991,
+      0.8620246582133971,
+      0.5799566507339478,
+      0.49993693362751784
+    ],
+    "category": "vuelta",
+    "score": 145.84700192451476,
+    "best_candidate_score": 150.8701611713152,
+    "similar_episodes": [
+      "vuelta/ep_1773941302278_336260.json",
+      "vuelta/ep_1773941402564_470943.json",
+      "vuelta/ep_1773940187568_207469.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.176210",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/vuelta/ep_1773941963492_790605.json",
+    "fingerprint_7d": [
+      -0.008225379139184951,
+      0.021901118755340575,
+      0.49120656875424606,
+      0.2105658430533484,
+      0.9692455722680162,
+      0.6330592036247253,
+      0.6135898300967815
+    ],
+    "category": "vuelta",
+    "score": 144.1339235329628,
+    "best_candidate_score": 152.58244228746767,
+    "similar_episodes": [
+      "vuelta/ep_1773941963492_790605.json",
+      "vuelta/ep_1773940047153_33631.json",
+      "vuelta/ep_1773940730707_10738.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.177683",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/medio_arriba/vuelta/ep_1773941750434_95825.json",
+    "fingerprint_7d": [
+      -0.013275867700576783,
+      0.013076317310333253,
+      0.48278009559269014,
+      0.2230689148607234,
+      0.9563768980429133,
+      0.6292946338653564,
+      0.6018428498912004
+    ],
+    "category": "vuelta",
+    "score": 144.51801021814347,
+    "best_candidate_score": 153.9563185615065,
+    "similar_episodes": [
+      "vuelta/ep_1773941750434_95825.json",
+      "vuelta/ep_1773941861790_780364.json",
+      "vuelta/ep_1773940608644_291697.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.179000",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/ida/ep_1773942506236_244162.json",
+    "fingerprint_7d": [
+      -0.0034659694880247115,
+      -0.33194589614868164,
+      0.3651089084946971,
+      0.11520645078369249,
+      1.0250510553592735,
+      0.16226434707641602,
+      0.1663292402178637
+    ],
+    "category": "ida",
+    "score": 142.62399504899977,
+    "best_candidate_score": 149.63970700526244,
+    "similar_episodes": [
+      "ida/ep_1773942506236_244162.json",
+      "ida/ep_1773942700053_1019981.json",
+      "ida/ep_1773942092152_555899.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.180317",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/ida/ep_1773942295054_188020.json",
+    "fingerprint_7d": [
+      -0.002089877054095268,
+      -0.3048302173614502,
+      0.3124035134363871,
+      0.0857568371500434,
+      1.10702367525542,
+      0.26662081480026245,
+      0.2951555542997812
+    ],
+    "category": "ida",
+    "score": 140.53239428281785,
+    "best_candidate_score": 149.63291645720085,
+    "similar_episodes": [
+      "ida/ep_1773942295054_188020.json",
+      "ida/ep_1773942354202_932922.json",
+      "ida/ep_1773942416277_778689.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.181637",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/ida/ep_1773942642641_411490.json",
+    "fingerprint_7d": [
+      0.0057110201567411424,
+      -0.3173171043395996,
+      0.3266976867884168,
+      0.08626484473596668,
+      1.109689994495795,
+      0.1835799217224121,
+      0.20371680232568196
+    ],
+    "category": "ida",
+    "score": 140.49750295877456,
+    "best_candidate_score": 145.5036866681497,
+    "similar_episodes": [
+      "ida/ep_1773942642641_411490.json",
+      "vuelta/ep_1773941869407_776991.json",
+      "ida/ep_1773942700053_1019981.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.183033",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/ida/ep_1773941900440_129669.json",
+    "fingerprint_7d": [
+      0.061775213479995726,
+      -0.21259379386901855,
+      -0.6715840016723801,
+      0.0813988829529645,
+      1.1221054441747975,
+      0.5243673324584961,
+      0.5883954384990945
+    ],
+    "category": "ida",
+    "score": 140.18689516305923,
+    "best_candidate_score": 149.94143730572682,
+    "similar_episodes": [
+      "ida/ep_1773941900440_129669.json",
+      "ida/ep_1773942034291_370441.json",
+      "vuelta/ep_1773942259503_596259.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.184396",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/ida/ep_1773942354202_932922.json",
+    "fingerprint_7d": [
+      0.003985055536031723,
+      -0.3030457735061646,
+      0.3359068025558865,
+      0.08412435648168314,
+      1.0418294674572326,
+      0.27162981033325195,
+      0.282991940645001
+    ],
+    "category": "ida",
+    "score": 142.7480982673168,
+    "best_candidate_score": 149.82039770428236,
+    "similar_episodes": [
+      "ida/ep_1773942354202_932922.json",
+      "vuelta/ep_1773941936039_743923.json",
+      "ida/ep_1773942295054_188020.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.185772",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/ida/ep_1773942700053_1019981.json",
+    "fingerprint_7d": [
+      0.004065535217523575,
+      -0.3206352233886719,
+      0.34721421416389725,
+      0.09653799775959104,
+      1.0146804462310897,
+      0.17002999782562256,
+      0.17252611406637391
+    ],
+    "category": "ida",
+    "score": 143.50406844973566,
+    "best_candidate_score": 150.18685676527792,
+    "similar_episodes": [
+      "ida/ep_1773942700053_1019981.json",
+      "vuelta/ep_1773941869407_776991.json",
+      "ida/ep_1773942642641_411490.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.187146",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/ida/ep_1773941970797_967569.json",
+    "fingerprint_7d": [
+      0.06146054267883301,
+      -0.22600343227386474,
+      -0.676766593542131,
+      0.07402983484871244,
+      1.182744091480521,
+      0.4947960376739502,
+      0.5852170900468379
+    ],
+    "category": "ida",
+    "score": 138.92759433984756,
+    "best_candidate_score": 148.04975966644182,
+    "similar_episodes": [
+      "ida/ep_1773941970797_967569.json",
+      "ida/ep_1773942034291_370441.json",
+      "ida/ep_1773941900440_129669.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.188545",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/ida/ep_1773942191002_146390.json",
+    "fingerprint_7d": [
+      0.012270818650722503,
+      -0.3357232093811035,
+      0.3757266311285335,
+      0.09523941721075449,
+      0.9890735454618114,
+      0.2795889377593994,
+      0.2765340219415909
+    ],
+    "category": "ida",
+    "score": 143.71732505083085,
+    "best_candidate_score": 153.51340434225142,
+    "similar_episodes": [
+      "ida/ep_1773942191002_146390.json",
+      "vuelta/ep_1773941790052_668454.json",
+      "ida/ep_1773942354202_932922.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.189955",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/ida/ep_1773941828340_485087.json",
+    "fingerprint_7d": [
+      0.06724315881729126,
+      -0.20370419025421144,
+      -0.6630174363050587,
+      0.093155798482346,
+      1.0971656084968657,
+      0.5924321413040161,
+      0.649996170806922
+    ],
+    "category": "ida",
+    "score": 140.79303593873976,
+    "best_candidate_score": 149.40452439720795,
+    "similar_episodes": [
+      "ida/ep_1773941828340_485087.json",
+      "vuelta/ep_1773942670251_969679.json",
+      "vuelta/ep_1773942322895_564408.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.191609",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/ida/ep_1773942092152_555899.json",
+    "fingerprint_7d": [
+      0.0014964181929826737,
+      -0.322590970993042,
+      0.3399619125662323,
+      0.08052689449497429,
+      1.1201523506001514,
+      0.12592202425003052,
+      0.14105185145600094
+    ],
+    "category": "ida",
+    "score": 140.2418049454689,
+    "best_candidate_score": 148.18028278837008,
+    "similar_episodes": [
+      "ida/ep_1773942092152_555899.json",
+      "vuelta/ep_1773941869407_776991.json",
+      "ida/ep_1773942700053_1019981.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.193294",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/ida/ep_1773942416277_778689.json",
+    "fingerprint_7d": [
+      -0.008247770369052887,
+      -0.3225112438201904,
+      0.32228778671160935,
+      0.09580923901714632,
+      1.0064213321694901,
+      0.23049652576446533,
+      0.2319766205203124
+    ],
+    "category": "ida",
+    "score": 143.19671736478804,
+    "best_candidate_score": 147.9422718555019,
+    "similar_episodes": [
+      "ida/ep_1773942416277_778689.json",
+      "ida/ep_1773942295054_188020.json",
+      "ida/ep_1773942506236_244162.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.195056",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/ida/ep_1773942034291_370441.json",
+    "fingerprint_7d": [
+      0.06213017702102661,
+      -0.21933493614196778,
+      -0.6718411736216466,
+      0.08547019212630153,
+      1.10222987337335,
+      0.49618613719940186,
+      0.5469111831749084
+    ],
+    "category": "ida",
+    "score": 140.4464994215965,
+    "best_candidate_score": 150.26030524697276,
+    "similar_episodes": [
+      "ida/ep_1773942034291_370441.json",
+      "ida/ep_1773941970797_967569.json",
+      "ida/ep_1773941900440_129669.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.196877",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/vuelta/ep_1773942086917_89275.json",
+    "fingerprint_7d": [
+      0.0014768412336707115,
+      -0.3224592447280884,
+      -0.8848938419531813,
+      0.0011164923750245329,
+      0.0,
+      0.12575894594192505,
+      0.0
+    ],
+    "category": "vuelta",
+    "score": 500.0,
+    "best_candidate_score": 508.3339797665386,
+    "similar_episodes": [
+      "vuelta/ep_1773942086917_89275.json",
+      "vuelta/ep_1773941936039_743923.json",
+      "ida/ep_1773942092152_555899.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.198769",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/vuelta/ep_1773942322895_564408.json",
+    "fingerprint_7d": [
+      0.06528469920158386,
+      -0.20310478210449218,
+      -0.6777116902064485,
+      0.08355959405280441,
+      1.2210776078824022,
+      0.5762613415718079,
+      0.703659820481607
+    ],
+    "category": "vuelta",
+    "score": 137.74905904054643,
+    "best_candidate_score": 147.42177842951506,
+    "similar_episodes": [
+      "vuelta/ep_1773942322895_564408.json",
+      "ida/ep_1773941828340_485087.json",
+      "vuelta/ep_1773942259503_596259.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.200758",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/vuelta/ep_1773942472933_377906.json",
+    "fingerprint_7d": [
+      0.06362060904502868,
+      -0.20416412353515626,
+      -0.6549097872530513,
+      0.10295539884175604,
+      1.045068232837523,
+      0.5472433567047119,
+      0.5719066477234674
+    ],
+    "category": "vuelta",
+    "score": 142.09669068574905,
+    "best_candidate_score": 151.9266606364604,
+    "similar_episodes": [
+      "vuelta/ep_1773942472933_377906.json",
+      "vuelta/ep_1773942383647_211503.json",
+      "vuelta/ep_1773942259503_596259.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.202479",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/vuelta/ep_1773942801936_668663.json",
+    "fingerprint_7d": [
+      0.06682909727096557,
+      -0.20025477409362794,
+      -0.6322237262957229,
+      0.10455624284978268,
+      1.3881232818932911,
+      0.5737354755401611,
+      0.7964155712454165
+    ],
+    "category": "vuelta",
+    "score": 133.97353764653207,
+    "best_candidate_score": 143.01872926897403,
+    "similar_episodes": [
+      "vuelta/ep_1773942801936_668663.json",
+      "ida/ep_1773941828340_485087.json",
+      "vuelta/ep_1773942472933_377906.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.204301",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/vuelta/ep_1773942670251_969679.json",
+    "fingerprint_7d": [
+      0.06768656969070434,
+      -0.21493978500366212,
+      -0.6747136108005019,
+      0.08809805225004964,
+      1.0762436185887838,
+      0.6037322282791138,
+      0.6497629580217831
+    ],
+    "category": "vuelta",
+    "score": 141.33899926424027,
+    "best_candidate_score": 149.80554633206523,
+    "similar_episodes": [
+      "vuelta/ep_1773942670251_969679.json",
+      "ida/ep_1773941828340_485087.json",
+      "vuelta/ep_1773942322895_564408.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.206251",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/vuelta/ep_1773942160202_1013507.json",
+    "fingerprint_7d": [
+      0.05700030326843262,
+      -0.22359418869018555,
+      -0.6208099658464681,
+      0.08658841740731002,
+      1.1290467530436463,
+      0.4934239983558655,
+      0.5570987632175034
+    ],
+    "category": "vuelta",
+    "score": 139.9281445336342,
+    "best_candidate_score": 149.70995734993855,
+    "similar_episodes": [
+      "vuelta/ep_1773942160202_1013507.json",
+      "ida/ep_1773942034291_370441.json",
+      "ida/ep_1773941970797_967569.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.208067",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/vuelta/ep_1773941936039_743923.json",
+    "fingerprint_7d": [
+      0.004070554673671722,
+      -0.3109971761703491,
+      0.3063981777673334,
+      0.07136543394868369,
+      1.123517415504886,
+      0.2216951847076416,
+      0.2490784009526078
+    ],
+    "category": "vuelta",
+    "score": 140.1958991456032,
+    "best_candidate_score": 143.5635783125233,
+    "similar_episodes": [
+      "vuelta/ep_1773941936039_743923.json",
+      "vuelta/ep_1773941998111_777193.json",
+      "ida/ep_1773942642641_411490.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.209901",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/vuelta/ep_1773942383647_211503.json",
+    "fingerprint_7d": [
+      0.062188577651977536,
+      -0.20131702423095704,
+      -0.6690912473417138,
+      0.10054397970287524,
+      1.133623691309136,
+      0.5277804136276245,
+      0.5983043806972104
+    ],
+    "category": "vuelta",
+    "score": 139.86640369176865,
+    "best_candidate_score": 149.02279205870846,
+    "similar_episodes": [
+      "vuelta/ep_1773942383647_211503.json",
+      "vuelta/ep_1773942472933_377906.json",
+      "ida/ep_1773941900440_129669.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.211847",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/vuelta/ep_1773942259503_596259.json",
+    "fingerprint_7d": [
+      0.06406070590019226,
+      -0.20462324619293212,
+      -0.6885675640530539,
+      0.08565972372560644,
+      1.1170280333405846,
+      0.5432383418083191,
+      0.606812456585347
+    ],
+    "category": "vuelta",
+    "score": 140.25878168821336,
+    "best_candidate_score": 149.68622006556242,
+    "similar_episodes": [
+      "vuelta/ep_1773942259503_596259.json",
+      "ida/ep_1773941900440_129669.json",
+      "vuelta/ep_1773942472933_377906.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.213633",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/vuelta/ep_1773941998111_777193.json",
+    "fingerprint_7d": [
+      0.007563500106334687,
+      -0.31459765434265136,
+      0.3293534253325162,
+      0.0762378932141676,
+      1.0193242692068205,
+      0.20648455619812012,
+      0.21047471934914344
+    ],
+    "category": "vuelta",
+    "score": 142.91185906648636,
+    "best_candidate_score": 152.7611646044597,
+    "similar_episodes": [
+      "vuelta/ep_1773941998111_777193.json",
+      "ida/ep_1773942642641_411490.json",
+      "vuelta/ep_1773941936039_743923.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.215666",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/vuelta/ep_1773942608927_263589.json",
+    "fingerprint_7d": [
+      0.06283054351806641,
+      -0.18534719944000244,
+      -0.632231283563013,
+      0.10224798344042632,
+      1.0672249230581925,
+      0.46811747550964355,
+      0.49958663678297466
+    ],
+    "category": "vuelta",
+    "score": 141.3273322701454,
+    "best_candidate_score": 147.912779590204,
+    "similar_episodes": [
+      "vuelta/ep_1773942608927_263589.json",
+      "ida/ep_1773942034291_370441.json",
+      "vuelta/ep_1773942383647_211503.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.217408",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/vuelta/ep_1773941790052_668454.json",
+    "fingerprint_7d": [
+      0.009469067305326461,
+      -0.33595075607299807,
+      0.36729295940327555,
+      0.10065127494199382,
+      0.9482411604543343,
+      0.24940133094787598,
+      0.2364926074768694
+    ],
+    "category": "vuelta",
+    "score": 145.53763800024987,
+    "best_candidate_score": 154.24427226713567,
+    "similar_episodes": [
+      "vuelta/ep_1773941790052_668454.json",
+      "ida/ep_1773942191002_146390.json",
+      "vuelta/ep_1773941998111_777193.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.219192",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_inicio/vuelta/ep_1773941869407_776991.json",
+    "fingerprint_7d": [
+      0.003861519321799278,
+      -0.318145751953125,
+      0.3421371979456346,
+      0.08600537822855675,
+      1.082512724593176,
+      0.168317973613739,
+      0.18220634821461093
+    ],
+    "category": "vuelta",
+    "score": 141.16192422628401,
+    "best_candidate_score": 148.80402309265114,
+    "similar_episodes": [
+      "vuelta/ep_1773941869407_776991.json",
+      "ida/ep_1773942700053_1019981.json",
+      "ida/ep_1773942642641_411490.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.220879",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773938937709_145232.json",
+    "fingerprint_7d": [
+      -0.012292204052209854,
+      0.01834256500005722,
+      -0.49604861905565434,
+      0.2243332804531518,
+      0.8513305185059044,
+      0.6286538243293762,
+      0.5351921862270476
+    ],
+    "category": "ida",
+    "score": 148.33618439912797,
+    "best_candidate_score": 154.14956418001756,
+    "similar_episodes": [
+      "ida/ep_1773938937709_145232.json",
+      "vuelta/ep_1773940418537_762964.json",
+      "ida/ep_1773939040401_705080.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.222609",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773938828826_624205.json",
+    "fingerprint_7d": [
+      -0.008165506273508072,
+      0.0029034776613116263,
+      -0.4815480029720718,
+      0.22427729677122765,
+      0.8815761934581763,
+      0.5985172986984253,
+      0.5276386019054281
+    ],
+    "category": "ida",
+    "score": 145.0427512216568,
+    "best_candidate_score": 153.5212165135684,
+    "similar_episodes": [
+      "ida/ep_1773938828826_624205.json",
+      "vuelta/ep_1773940252195_805632.json",
+      "vuelta/ep_1773940418537_762964.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.224348",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773940603181_142963.json",
+    "fingerprint_7d": [
+      -0.006606590002775192,
+      0.01340939849615097,
+      -0.5024053877735242,
+      0.2503707736411492,
+      0.7968233609967064,
+      0.6424047946929932,
+      0.51188314762767
+    ],
+    "category": "ida",
+    "score": 150.7303874325752,
+    "best_candidate_score": 156.66816883573048,
+    "similar_episodes": [
+      "ida/ep_1773940603181_142963.json",
+      "ida/ep_1773941414199_598576.json",
+      "ida/ep_1773941536814_594980.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.226187",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773939992555_1003136.json",
+    "fingerprint_7d": [
+      -0.021655967831611632,
+      0.032715904712677005,
+      -0.3973286092178766,
+      0.1932498702103513,
+      0.022465105926452587,
+      0.6276081204414368,
+      0.01409928290601869
+    ],
+    "category": "ida",
+    "score": 500.0,
+    "best_candidate_score": 509.68357709845907,
+    "similar_episodes": [
+      "ida/ep_1773939992555_1003136.json",
+      "vuelta/ep_1773939994146_381905.json",
+      "vuelta/ep_1773940135337_87810.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.228051",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773941414199_598576.json",
+    "fingerprint_7d": [
+      -0.005352120473980903,
+      0.0224913090467453,
+      -0.48713282628087023,
+      0.2502106532893106,
+      0.8541241969631524,
+      0.6167546510696411,
+      0.5267850710681465
+    ],
+    "category": "ida",
+    "score": 142.31739230930805,
+    "best_candidate_score": 151.0187277031558,
+    "similar_episodes": [
+      "ida/ep_1773941414199_598576.json",
+      "ida/ep_1773940603181_142963.json",
+      "ida/ep_1773938714353_787241.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.229776",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773941100471_684059.json",
+    "fingerprint_7d": [
+      0.007547524571418762,
+      0.18319242000579833,
+      -0.5056327345515735,
+      0.07071474482521052,
+      0.0,
+      0.5874999761581421,
+      0.0
+    ],
+    "category": "ida",
+    "score": 500.0,
+    "best_candidate_score": 505.8202896361826,
+    "similar_episodes": [
+      "ida/ep_1773941100471_684059.json",
+      "vuelta/ep_1773941101412_708341.json",
+      "vuelta/ep_1773941100847_221800.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.231593",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773941096755_276608.json",
+    "fingerprint_7d": [
+      0.005004105344414711,
+      0.18742685317993163,
+      -0.5094259183427151,
+      0.1195092094664247,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "category": "ida",
+    "score": 500.0,
+    "best_candidate_score": 508.99423515076,
+    "similar_episodes": [
+      "ida/ep_1773941096755_276608.json",
+      "vuelta/ep_1773941097167_52179.json",
+      "ida/ep_1773941097487_944400.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.233389",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773941108578_414116.json",
+    "fingerprint_7d": [
+      0.00500231385231018,
+      0.18661351203918458,
+      -0.49730514995686537,
+      0.11178378506857278,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "category": "ida",
+    "score": 500.0,
+    "best_candidate_score": 508.5401535331931,
+    "similar_episodes": [
+      "ida/ep_1773941108578_414116.json",
+      "vuelta/ep_1773941108256_578714.json",
+      "vuelta/ep_1773941108900_6208.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.235200",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773940082085_533215.json",
+    "fingerprint_7d": [
+      0.017410771548748018,
+      -0.2937833309173584,
+      0.5348381801880617,
+      0.2208721131913279,
+      0.9162697119531997,
+      0.3580818176269531,
+      0.32809952389272656
+    ],
+    "category": "ida",
+    "score": 138.40024931907655,
+    "best_candidate_score": 148.24322526240633,
+    "similar_episodes": [
+      "ida/ep_1773940082085_533215.json",
+      "vuelta/ep_1773941244756_738916.json",
+      "vuelta/ep_1773938880095_1037653.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.236997",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773941097487_944400.json",
+    "fingerprint_7d": [
+      0.004962345957756043,
+      0.18724167346954346,
+      -0.5093575555424796,
+      0.11937745352022237,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "category": "ida",
+    "score": 500.0,
+    "best_candidate_score": 504.2874115216407,
+    "similar_episodes": [
+      "ida/ep_1773941097487_944400.json",
+      "ida/ep_1773941096755_276608.json",
+      "vuelta/ep_1773941097167_52179.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.238809",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773940404949_656837.json",
+    "fingerprint_7d": [
+      -0.0010163616389036179,
+      -0.03943993449211121,
+      -0.5211941767923906,
+      0.1864962599424418,
+      1.5802882053217207,
+      0.5227960348129272,
+      0.8261684076038326
+    ],
+    "category": "ida",
+    "score": 123.82589370727538,
+    "best_candidate_score": 131.89684734707384,
+    "similar_episodes": [
+      "ida/ep_1773940404949_656837.json",
+      "vuelta/ep_1773940403420_826770.json",
+      "ida/ep_1773941297640_78804.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.240626",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773941101127_662445.json",
+    "fingerprint_7d": [
+      0.006139599159359932,
+      0.1845664620399475,
+      -0.5011357013467718,
+      0.07167572396751787,
+      0.0,
+      0.6256943941116333,
+      0.0
+    ],
+    "category": "ida",
+    "score": 500.0,
+    "best_candidate_score": 509.48510698522574,
+    "similar_episodes": [
+      "ida/ep_1773941101127_662445.json",
+      "vuelta/ep_1773941100847_221800.json",
+      "vuelta/ep_1773941101412_708341.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.242472",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773940194030_518242.json",
+    "fingerprint_7d": [
+      -0.009007059782743455,
+      -0.3150813102722168,
+      0.4946834107544229,
+      0.22414010224377987,
+      0.782593247412214,
+      0.22912704944610596,
+      0.179313281696007
+    ],
+    "category": "ida",
+    "score": 151.51769459962844,
+    "best_candidate_score": 158.48347177966514,
+    "similar_episodes": [
+      "ida/ep_1773940194030_518242.json",
+      "vuelta/ep_1773938992806_969779.json",
+      "vuelta/ep_1773938770320_333445.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.244407",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773941109854_118576.json",
+    "fingerprint_7d": [
+      0.004961021244525909,
+      0.18670735359191895,
+      -0.5185992943954181,
+      0.1176513382801919,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "category": "ida",
+    "score": 500.0,
+    "best_candidate_score": 509.70223608392104,
+    "similar_episodes": [
+      "ida/ep_1773941109854_118576.json",
+      "vuelta/ep_1773941110189_358031.json",
+      "ida/ep_1773940837565_837468.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.246458",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773941536814_594980.json",
+    "fingerprint_7d": [
+      -0.0017140895128250123,
+      0.012894493341445924,
+      -0.49031274447366724,
+      0.24776398496158286,
+      0.8890842884397956,
+      0.6293293833732605,
+      0.5595268670106707
+    ],
+    "category": "ida",
+    "score": 144.2342881089449,
+    "best_candidate_score": 154.10648455470323,
+    "similar_episodes": [
+      "ida/ep_1773941536814_594980.json",
+      "ida/ep_1773941414199_598576.json",
+      "ida/ep_1773940603181_142963.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.248355",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773939582138_609258.json",
+    "fingerprint_7d": [
+      -0.014638157188892364,
+      0.061443233489990236,
+      -0.48801522268582603,
+      0.292412166917425,
+      0.7993398387379259,
+      0.6886662244796753,
+      0.5504783488198399
+    ],
+    "category": "ida",
+    "score": 150.33764555215836,
+    "best_candidate_score": 159.92248443819932,
+    "similar_episodes": [
+      "ida/ep_1773939582138_609258.json",
+      "ida/ep_1773939171831_367506.json",
+      "ida/ep_1773939040401_705080.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.250265",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773941107924_276622.json",
+    "fingerprint_7d": [
+      0.004943885654211044,
+      0.18647537231445313,
+      -0.5003796526134736,
+      0.11168217893110143,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "category": "ida",
+    "score": 500.0,
+    "best_candidate_score": 508.46865356709077,
+    "similar_episodes": [
+      "ida/ep_1773941107924_276622.json",
+      "ida/ep_1773941108578_414116.json",
+      "vuelta/ep_1773941108256_578714.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.252195",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773941297640_78804.json",
+    "fingerprint_7d": [
+      -0.0035658076405525206,
+      -0.002532038651406765,
+      -0.4996363943389705,
+      0.2448040871461138,
+      0.7440519664668904,
+      0.5790163278579712,
+      0.4308182373591612
+    ],
+    "category": "ida",
+    "score": 152.95124408960342,
+    "best_candidate_score": 162.6041803193306,
+    "similar_episodes": [
+      "ida/ep_1773941297640_78804.json",
+      "vuelta/ep_1773940252195_805632.json",
+      "ida/ep_1773938714353_787241.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.254640",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773939040401_705080.json",
+    "fingerprint_7d": [
+      -0.013679605722427369,
+      0.009044338762760163,
+      -0.4863864051440362,
+      0.24159081151625503,
+      0.8558483824162053,
+      0.6305951476097107,
+      0.5396938370412792
+    ],
+    "category": "ida",
+    "score": 148.12435217142104,
+    "best_candidate_score": 153.01513357854205,
+    "similar_episodes": [
+      "ida/ep_1773939040401_705080.json",
+      "ida/ep_1773939171831_367506.json",
+      "vuelta/ep_1773940135337_87810.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.256608",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773939171831_367506.json",
+    "fingerprint_7d": [
+      -0.012566758692264557,
+      0.02085214853286743,
+      -0.48931724944461674,
+      0.24526290871212214,
+      1.4595799854752065,
+      0.6251220703125,
+      0.9124156623069498
+    ],
+    "category": "ida",
+    "score": 124.94647742271424,
+    "best_candidate_score": 134.599146917686,
+    "similar_episodes": [
+      "ida/ep_1773939171831_367506.json",
+      "ida/ep_1773939040401_705080.json",
+      "vuelta/ep_1773940135337_87810.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.258769",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773940835668_569856.json",
+    "fingerprint_7d": [
+      0.005372531339526176,
+      0.18740172386169435,
+      -0.5136205201435328,
+      0.11949533960031546,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "category": "ida",
+    "score": 500.0,
+    "best_candidate_score": 505.88905675549154,
+    "similar_episodes": [
+      "ida/ep_1773940835668_569856.json",
+      "vuelta/ep_1773940837842_1001793.json",
+      "vuelta/ep_1773940836372_165071.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.260791",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773940851156_457627.json",
+    "fingerprint_7d": [
+      0.00516117624938488,
+      0.18633465766906737,
+      -0.5041420144768056,
+      0.1291440194350019,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "category": "ida",
+    "score": 500.0,
+    "best_candidate_score": 508.28919399343073,
+    "similar_episodes": [
+      "ida/ep_1773940851156_457627.json",
+      "vuelta/ep_1773940851527_80959.json",
+      "ida/ep_1773940852315_650002.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.262833",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773940837565_837468.json",
+    "fingerprint_7d": [
+      0.005241205170750618,
+      0.18720583915710448,
+      -0.5133888904925825,
+      0.11935301423704264,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "category": "ida",
+    "score": 500.0,
+    "best_candidate_score": 509.81626116145907,
+    "similar_episodes": [
+      "ida/ep_1773940837565_837468.json",
+      "vuelta/ep_1773940836372_165071.json",
+      "vuelta/ep_1773940837842_1001793.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.264977",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773938714353_787241.json",
+    "fingerprint_7d": [
+      -0.00779775083065033,
+      0.006648160517215729,
+      -0.4972184987986191,
+      0.25543777855462546,
+      0.8315126113326431,
+      0.5973601341247559,
+      0.49671248503209364
+    ],
+    "category": "ida",
+    "score": 149.6567041862011,
+    "best_candidate_score": 158.2803929415208,
+    "similar_episodes": [
+      "ida/ep_1773938714353_787241.json",
+      "vuelta/ep_1773940252195_805632.json",
+      "ida/ep_1773941414199_598576.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.267048",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773940852315_650002.json",
+    "fingerprint_7d": [
+      0.005124007165431976,
+      0.18661975860595703,
+      -0.5076907257675963,
+      0.12280699029046385,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "category": "ida",
+    "score": 500.0,
+    "best_candidate_score": 509.7818785009257,
+    "similar_episodes": [
+      "ida/ep_1773940852315_650002.json",
+      "ida/ep_1773941096755_276608.json",
+      "vuelta/ep_1773941097167_52179.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.269203",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773941136014_412170.json",
+    "fingerprint_7d": [
+      0.01686459481716156,
+      0.1815673828125,
+      -0.5031396633367503,
+      0.2998972716349901,
+      0.9502885091268682,
+      0.6318550109863281,
+      0.6004445563745388
+    ],
+    "category": "ida",
+    "score": 138.28283122971655,
+    "best_candidate_score": 148.04750118225337,
+    "similar_episodes": [
+      "ida/ep_1773941136014_412170.json",
+      "ida/ep_1773941452770_730543.json",
+      "vuelta/ep_1773941062671_168440.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.271351",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/ida/ep_1773940304698_420881.json",
+    "fingerprint_7d": [
+      0.002708148956298828,
+      -0.33831214904785156,
+      0.506838637178546,
+      0.2419040547178636,
+      1.6461008424433683,
+      0.1349102258682251,
+      0.22207583645591042
+    ],
+    "category": "ida",
+    "score": 23.31419613838196,
+    "best_candidate_score": 32.32150084839144,
+    "similar_episodes": [
+      "ida/ep_1773940304698_420881.json",
+      "vuelta/ep_1773939093520_455038.json",
+      "vuelta/ep_1773939842557_175849.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.273477",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773939842557_175849.json",
+    "fingerprint_7d": [
+      0.0008078118786215782,
+      -0.3511648654937744,
+      0.5081519971332148,
+      0.25298849371007376,
+      1.2916162299251899,
+      0.13512670993804932,
+      0.17453185165237795
+    ],
+    "category": "vuelta",
+    "score": 129.75890551522374,
+    "best_candidate_score": 136.32837551726817,
+    "similar_episodes": [
+      "vuelta/ep_1773939842557_175849.json",
+      "vuelta/ep_1773939093520_455038.json",
+      "ida/ep_1773940304698_420881.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.275569",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773939258223_699474.json",
+    "fingerprint_7d": [
+      -0.001991424709558487,
+      -0.32462301254272463,
+      0.5080116809248919,
+      0.23092898352301777,
+      0.7763393508037865,
+      0.16355544328689575,
+      0.12697452666177417
+    ],
+    "category": "vuelta",
+    "score": 151.8131272482872,
+    "best_candidate_score": 160.54465213571325,
+    "similar_episodes": [
+      "vuelta/ep_1773939258223_699474.json",
+      "vuelta/ep_1773938655999_915834.json",
+      "vuelta/ep_1773939093520_455038.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.277672",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773941358585_639138.json",
+    "fingerprint_7d": [
+      -0.003579813987016678,
+      -0.3481412410736084,
+      0.50100622240952,
+      0.2629875977299941,
+      0.7557408115268922,
+      0.1802511215209961,
+      0.13622312885691004
+    ],
+    "category": "vuelta",
+    "score": 152.67682829618454,
+    "best_candidate_score": 161.63271187778048,
+    "similar_episodes": [
+      "vuelta/ep_1773941358585_639138.json",
+      "vuelta/ep_1773938655999_915834.json",
+      "vuelta/ep_1773939258223_699474.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.279783",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773941108900_6208.json",
+    "fingerprint_7d": [
+      0.004996930062770843,
+      0.18670668601989746,
+      -0.4941065070327861,
+      0.11186483626576829,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "category": "vuelta",
+    "score": 500.0,
+    "best_candidate_score": 506.2045702529089,
+    "similar_episodes": [
+      "vuelta/ep_1773941108900_6208.json",
+      "ida/ep_1773941108578_414116.json",
+      "vuelta/ep_1773941108256_578714.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.281918",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773941097167_52179.json",
+    "fingerprint_7d": [
+      0.00502176471054554,
+      0.18729004859924317,
+      -0.5094668242999361,
+      0.11941288713367908,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "category": "vuelta",
+    "score": 500.0,
+    "best_candidate_score": 504.86594431190787,
+    "similar_episodes": [
+      "vuelta/ep_1773941097167_52179.json",
+      "ida/ep_1773941096755_276608.json",
+      "vuelta/ep_1773941097803_24288.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.284121",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773941095773_444047.json",
+    "fingerprint_7d": [
+      0.004965034499764443,
+      0.1872796058654785,
+      -0.5294138283216719,
+      0.13545596371133983,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "category": "vuelta",
+    "score": 500.0,
+    "best_candidate_score": 509.8228983260005,
+    "similar_episodes": [
+      "vuelta/ep_1773941095773_444047.json",
+      "vuelta/ep_1773940851527_80959.json",
+      "ida/ep_1773940851156_457627.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.286481",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773939093520_455038.json",
+    "fingerprint_7d": [
+      0.0006336541846394539,
+      -0.3306669473648071,
+      0.5106692659873843,
+      0.24839614083254252,
+      1.3065221073219428,
+      0.12294250726699829,
+      0.16062710367392188
+    ],
+    "category": "vuelta",
+    "score": 131.9485197508335,
+    "best_candidate_score": 135.4028934449492,
+    "similar_episodes": [
+      "vuelta/ep_1773939093520_455038.json",
+      "vuelta/ep_1773939842557_175849.json",
+      "ida/ep_1773940304698_420881.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.288683",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773941244756_738916.json",
+    "fingerprint_7d": [
+      0.01234404742717743,
+      -0.24092164039611816,
+      0.522703283879071,
+      0.16966782466688848,
+      0.928678651833483,
+      0.4091513752937317,
+      0.37997014760359815
+    ],
+    "category": "vuelta",
+    "score": 138.31855422973632,
+    "best_candidate_score": 147.20446355590232,
+    "similar_episodes": [
+      "vuelta/ep_1773941244756_738916.json",
+      "ida/ep_1773940082085_533215.json",
+      "vuelta/ep_1773938880095_1037653.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.290880",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773941097803_24288.json",
+    "fingerprint_7d": [
+      0.005020979046821594,
+      0.18695086240768433,
+      -0.5094843906604719,
+      0.11917313600332145,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "category": "vuelta",
+    "score": 500.0,
+    "best_candidate_score": 509.86309302581765,
+    "similar_episodes": [
+      "vuelta/ep_1773941097803_24288.json",
+      "vuelta/ep_1773941097167_52179.json",
+      "ida/ep_1773941097487_944400.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.293234",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773938992806_969779.json",
+    "fingerprint_7d": [
+      -0.01009669080376625,
+      -0.30013046264648435,
+      0.5039247337534124,
+      0.21946085609833302,
+      0.7892775308513603,
+      0.2971377968788147,
+      0.2345241866431239
+    ],
+    "category": "vuelta",
+    "score": 150.3201480591297,
+    "best_candidate_score": 157.94552326996052,
+    "similar_episodes": [
+      "vuelta/ep_1773938992806_969779.json",
+      "ida/ep_1773940194030_518242.json",
+      "vuelta/ep_1773938770320_333445.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.295521",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773940478100_793320.json",
+    "fingerprint_7d": [
+      -0.019080984592437743,
+      -0.3019195556640625,
+      0.4863911219903106,
+      0.22353893730709307,
+      0.7470396797765785,
+      0.39626431465148926,
+      0.29602516672413387
+    ],
+    "category": "vuelta",
+    "score": 153.2905261397362,
+    "best_candidate_score": 162.1764179240203,
+    "similar_episodes": [
+      "vuelta/ep_1773940478100_793320.json",
+      "vuelta/ep_1773938992806_969779.json",
+      "ida/ep_1773940194030_518242.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.297789",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773941100847_221800.json",
+    "fingerprint_7d": [
+      0.006227869167923927,
+      0.18464529514312744,
+      -0.5014117898250969,
+      0.0717317167121704,
+      0.0,
+      0.6256943941116333,
+      0.0
+    ],
+    "category": "vuelta",
+    "score": 500.0,
+    "best_candidate_score": 508.68267201428057,
+    "similar_episodes": [
+      "vuelta/ep_1773941100847_221800.json",
+      "ida/ep_1773941101127_662445.json",
+      "vuelta/ep_1773941101412_708341.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.300125",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773938655999_915834.json",
+    "fingerprint_7d": [
+      -0.0026836890727281572,
+      -0.3507546424865723,
+      0.5042139940516349,
+      0.25329401055213924,
+      0.7735224792086529,
+      0.16521304845809937,
+      0.12779600684092834
+    ],
+    "category": "vuelta",
+    "score": 151.67680374383926,
+    "best_candidate_score": 159.65923258867647,
+    "similar_episodes": [
+      "vuelta/ep_1773938655999_915834.json",
+      "vuelta/ep_1773941358585_639138.json",
+      "vuelta/ep_1773939842557_175849.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.302414",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773941101412_708341.json",
+    "fingerprint_7d": [
+      0.006061539426445961,
+      0.1844914197921753,
+      -0.5008912356726594,
+      0.07162248560993359,
+      0.0,
+      0.6104166507720947,
+      0.0
+    ],
+    "category": "vuelta",
+    "score": 500.0,
+    "best_candidate_score": 506.6134029026657,
+    "similar_episodes": [
+      "vuelta/ep_1773941101412_708341.json",
+      "ida/ep_1773941101127_662445.json",
+      "vuelta/ep_1773941100847_221800.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.304696",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773940776433_927690.json",
+    "fingerprint_7d": [
+      0.005555836111307144,
+      0.18584622144699098,
+      -0.39601418891588114,
+      0.034800604649038044,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "category": "vuelta",
+    "score": 500.0,
+    "best_candidate_score": 509.8903396507334,
+    "similar_episodes": [
+      "vuelta/ep_1773940776433_927690.json",
+      "vuelta/ep_1773941108900_6208.json",
+      "ida/ep_1773941108578_414116.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.307139",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773941110189_358031.json",
+    "fingerprint_7d": [
+      0.004949348419904709,
+      0.18685765266418458,
+      -0.5185602445862645,
+      0.11775695326872195,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "category": "vuelta",
+    "score": 500.0,
+    "best_candidate_score": 509.3005923876333,
+    "similar_episodes": [
+      "vuelta/ep_1773941110189_358031.json",
+      "ida/ep_1773941109854_118576.json",
+      "ida/ep_1773940837565_837468.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.309453",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773940836372_165071.json",
+    "fingerprint_7d": [
+      0.005266740918159485,
+      0.18767228126525878,
+      -0.5133999847582632,
+      0.11968330623627398,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "category": "vuelta",
+    "score": 500.0,
+    "best_candidate_score": 505.83660423117976,
+    "similar_episodes": [
+      "vuelta/ep_1773940836372_165071.json",
+      "ida/ep_1773940837565_837468.json",
+      "ida/ep_1773940835668_569856.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.311854",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773940403420_826770.json",
+    "fingerprint_7d": [
+      -0.001117691583931446,
+      -0.0367062121629715,
+      -0.5208561267037645,
+      0.18842034921014195,
+      0.0,
+      0.5493055582046509,
+      0.0
+    ],
+    "category": "vuelta",
+    "score": 500.0,
+    "best_candidate_score": 506.9785576499065,
+    "similar_episodes": [
+      "vuelta/ep_1773940403420_826770.json",
+      "ida/ep_1773940404949_656837.json",
+      "ida/ep_1773941297640_78804.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.314240",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773941479775_270669.json",
+    "fingerprint_7d": [
+      0.009832046180963516,
+      -0.32901716232299805,
+      0.510770465642298,
+      0.24291266070196793,
+      0.8745996946653247,
+      0.23782426118850708,
+      0.20800102621947472
+    ],
+    "category": "vuelta",
+    "score": 139.9076425218582,
+    "best_candidate_score": 145.9017032612429,
+    "similar_episodes": [
+      "vuelta/ep_1773941479775_270669.json",
+      "vuelta/ep_1773938880095_1037653.json",
+      "ida/ep_1773941232298_240084.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.316786",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773938880095_1037653.json",
+    "fingerprint_7d": [
+      0.011198422312736512,
+      -0.3125535249710083,
+      0.5223912660980978,
+      0.234058292135203,
+      0.9061979962360995,
+      0.2517285943031311,
+      0.22811594775282742
+    ],
+    "category": "vuelta",
+    "score": 139.9271859164536,
+    "best_candidate_score": 141.04257245870735,
+    "similar_episodes": [
+      "vuelta/ep_1773938880095_1037653.json",
+      "vuelta/ep_1773941479775_270669.json",
+      "ida/ep_1773941232298_240084.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.319203",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773940252195_805632.json",
+    "fingerprint_7d": [
+      -0.005810777842998505,
+      0.001725865714251995,
+      -0.49198889471746227,
+      0.24152226255124482,
+      0.8063732723953849,
+      0.5896632671356201,
+      0.47548869833150403
+    ],
+    "category": "vuelta",
+    "score": 150.1410747218132,
+    "best_candidate_score": 159.19525682458456,
+    "similar_episodes": [
+      "vuelta/ep_1773940252195_805632.json",
+      "ida/ep_1773941297640_78804.json",
+      "ida/ep_1773938714353_787241.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.321594",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773941108256_578714.json",
+    "fingerprint_7d": [
+      0.005013686418533325,
+      0.18668773174285888,
+      -0.4973293019086075,
+      0.11183619668496934,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "category": "vuelta",
+    "score": 500.0,
+    "best_candidate_score": 509.4905485284464,
+    "similar_episodes": [
+      "vuelta/ep_1773941108256_578714.json",
+      "ida/ep_1773941108578_414116.json",
+      "vuelta/ep_1773941108900_6208.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.324023",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773940851527_80959.json",
+    "fingerprint_7d": [
+      0.005340514332056045,
+      0.18683630228042603,
+      -0.5044423427863377,
+      0.12950041343847712,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "category": "vuelta",
+    "score": 500.0,
+    "best_candidate_score": 508.23887792115835,
+    "similar_episodes": [
+      "vuelta/ep_1773940851527_80959.json",
+      "ida/ep_1773940851156_457627.json",
+      "ida/ep_1773940852315_650002.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.326557",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773938770320_333445.json",
+    "fingerprint_7d": [
+      -0.004193449020385742,
+      -0.35355777740478517,
+      0.5028872750711566,
+      0.25198252872245946,
+      0.7870312245988368,
+      0.26170670986175537,
+      0.2059713523482298
+    ],
+    "category": "vuelta",
+    "score": 151.19032475709915,
+    "best_candidate_score": 160.9506865053409,
+    "similar_episodes": [
+      "vuelta/ep_1773938770320_333445.json",
+      "ida/ep_1773940194030_518242.json",
+      "ida/ep_1773940469988_45118.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.329020",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773940837842_1001793.json",
+    "fingerprint_7d": [
+      0.005332525819540024,
+      0.18686283826828004,
+      -0.5135885535337815,
+      0.11911342925514812,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "category": "vuelta",
+    "score": 500.0,
+    "best_candidate_score": 509.7634990764301,
+    "similar_episodes": [
+      "vuelta/ep_1773940837842_1001793.json",
+      "ida/ep_1773940835668_569856.json",
+      "ida/ep_1773940837565_837468.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.331484",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773940135337_87810.json",
+    "fingerprint_7d": [
+      -0.01576775312423706,
+      0.014947199821472168,
+      -0.49286184546503625,
+      0.2337882610496958,
+      0.8042848874479162,
+      0.628882646560669,
+      0.5058008086069953
+    ],
+    "category": "vuelta",
+    "score": 150.96267027258872,
+    "best_candidate_score": 160.9259029271721,
+    "similar_episodes": [
+      "vuelta/ep_1773940135337_87810.json",
+      "ida/ep_1773939040401_705080.json",
+      "ida/ep_1773938937709_145232.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.333944",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/abajo_medio/vuelta/ep_1773939994146_381905.json",
+    "fingerprint_7d": [
+      -0.022299835085868837,
+      0.034877434372901917,
+      -0.46244904829890837,
+      0.23435499537952914,
+      1.2672535285792197,
+      0.620176374912262,
+      0.785920699449033
+    ],
+    "category": "vuelta",
+    "score": 131.9057311439514,
+    "best_candidate_score": 141.77276538350668,
+    "similar_episodes": [
+      "vuelta/ep_1773939994146_381905.json",
+      "vuelta/ep_1773940135337_87810.json",
+      "ida/ep_1773939992555_1003136.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.336429",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/ida/ep_1773936216895_362859.json",
+    "fingerprint_7d": [
+      -0.022710412740707397,
+      0.3261785745620728,
+      -0.4499713261144696,
+      0.40032210207150054,
+      1.0601325425798263,
+      0.4964427351951599,
+      0.5262950991077283
+    ],
+    "category": "ida",
+    "score": 136.17214015483856,
+    "best_candidate_score": 145.1640383369836,
+    "similar_episodes": [
+      "ida/ep_1773936216895_362859.json",
+      "ida/ep_1773937607075_845836.json",
+      "ida/ep_1773934517665_811205.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.339086",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/ida/ep_1773937311970_765775.json",
+    "fingerprint_7d": [
+      -0.011722494661808015,
+      0.3097579002380371,
+      -0.4523698251661088,
+      0.36820047024221136,
+      1.19117638314953,
+      0.3573007583618164,
+      0.4256082250420126
+    ],
+    "category": "ida",
+    "score": 135.19347476780413,
+    "best_candidate_score": 143.41947533908208,
+    "similar_episodes": [
+      "ida/ep_1773937311970_765775.json",
+      "ida/ep_1773937874860_59886.json",
+      "ida/ep_1773933905456_414851.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.341631",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/ida/ep_1773938130911_44433.json",
+    "fingerprint_7d": [
+      -0.0011417355388402938,
+      0.32140610218048093,
+      -0.4628934152409751,
+      0.40196119540538766,
+      1.0437598036011475,
+      0.35754579305648804,
+      0.3731919267390565
+    ],
+    "category": "ida",
+    "score": 139.19671672284602,
+    "best_candidate_score": 144.94000339405756,
+    "similar_episodes": [
+      "ida/ep_1773938130911_44433.json",
+      "ida/ep_1773933637742_981896.json",
+      "ida/ep_1773933905456_414851.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.344176",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/ida/ep_1773933376465_1016942.json",
+    "fingerprint_7d": [
+      -0.011593063175678254,
+      0.329581618309021,
+      -0.4586531994250593,
+      0.3985162966727226,
+      1.0762509931451099,
+      0.4556056261062622,
+      0.4903460075793643
+    ],
+    "category": "ida",
+    "score": 135.07338655382395,
+    "best_candidate_score": 144.06724490606933,
+    "similar_episodes": [
+      "ida/ep_1773933376465_1016942.json",
+      "ida/ep_1773935983777_53157.json",
+      "ida/ep_1773935218039_681919.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.346803",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/ida/ep_1773937874860_59886.json",
+    "fingerprint_7d": [
+      -0.005969176441431046,
+      0.32402920722961426,
+      -0.4558940293971338,
+      0.39171520845117397,
+      1.1422659563903026,
+      0.38684338331222534,
+      0.4418780272123995
+    ],
+    "category": "ida",
+    "score": 138.51595892190934,
+    "best_candidate_score": 147.2192986483446,
+    "similar_episodes": [
+      "ida/ep_1773937874860_59886.json",
+      "ida/ep_1773935732187_788131.json",
+      "ida/ep_1773933905456_414851.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.349372",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/ida/ep_1773933637742_981896.json",
+    "fingerprint_7d": [
+      0.0008043088018894196,
+      0.3101217269897461,
+      -0.4621713213992805,
+      0.38585729421183446,
+      1.1364729555395436,
+      0.3482263684272766,
+      0.39574985012334907
+    ],
+    "category": "ida",
+    "score": 138.61488164186477,
+    "best_candidate_score": 145.9705465208364,
+    "similar_episodes": [
+      "ida/ep_1773933637742_981896.json",
+      "ida/ep_1773938130911_44433.json",
+      "ida/ep_1773933905456_414851.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.352087",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/ida/ep_1773935732187_788131.json",
+    "fingerprint_7d": [
+      -0.005444731563329697,
+      0.32380998134613037,
+      -0.462067365639612,
+      0.39123687670964724,
+      1.1102961219283678,
+      0.3926721215248108,
+      0.4359823337183822
+    ],
+    "category": "ida",
+    "score": 132.96228233769537,
+    "best_candidate_score": 142.51537560795938,
+    "similar_episodes": [
+      "ida/ep_1773935732187_788131.json",
+      "ida/ep_1773937874860_59886.json",
+      "ida/ep_1773934949726_17525.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.354705",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/ida/ep_1773935218039_681919.json",
+    "fingerprint_7d": [
+      -0.007470183819532394,
+      0.3284801959991455,
+      -0.4573716882432773,
+      0.37874695009334525,
+      1.233789325987115,
+      0.4312335252761841,
+      0.5320513204935508
+    ],
+    "category": "ida",
+    "score": 134.10241874992846,
+    "best_candidate_score": 141.8771602671592,
+    "similar_episodes": [
+      "ida/ep_1773935218039_681919.json",
+      "ida/ep_1773935483117_542538.json",
+      "ida/ep_1773935732187_788131.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.357309",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/ida/ep_1773934949726_17525.json",
+    "fingerprint_7d": [
+      -0.002825123257935047,
+      0.32637839317321776,
+      -0.457193707574439,
+      0.3918471450995469,
+      1.1465460730705874,
+      0.3986014127731323,
+      0.45701488453542316
+    ],
+    "category": "ida",
+    "score": 135.8577452546358,
+    "best_candidate_score": 145.1092773327601,
+    "similar_episodes": [
+      "ida/ep_1773934949726_17525.json",
+      "ida/ep_1773935732187_788131.json",
+      "ida/ep_1773937874860_59886.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.359948",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/ida/ep_1773937607075_845836.json",
+    "fingerprint_7d": [
+      -0.014380326867103577,
+      0.33527441024780275,
+      -0.4538909455770781,
+      0.384183548027187,
+      1.2002525236120285,
+      0.5255270004272461,
+      0.6307651084890618
+    ],
+    "category": "ida",
+    "score": 136.09979707241058,
+    "best_candidate_score": 145.64526222894415,
+    "similar_episodes": [
+      "ida/ep_1773937607075_845836.json",
+      "ida/ep_1773934517665_811205.json",
+      "ida/ep_1773933376465_1016942.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.362580",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/ida/ep_1773934517665_811205.json",
+    "fingerprint_7d": [
+      -0.013320358097553253,
+      0.33200697898864745,
+      -0.4489590457728592,
+      0.3744665945171658,
+      1.2969082862867178,
+      0.49090927839279175,
+      0.6366643109626449
+    ],
+    "category": "ida",
+    "score": 131.17318957924843,
+    "best_candidate_score": 139.1522410881219,
+    "similar_episodes": [
+      "ida/ep_1773934517665_811205.json",
+      "ida/ep_1773937607075_845836.json",
+      "ida/ep_1773933376465_1016942.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.365351",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/ida/ep_1773933905456_414851.json",
+    "fingerprint_7d": [
+      -0.0047497890889644625,
+      0.3131956338882446,
+      -0.4613580514492972,
+      0.3910822781839703,
+      1.1238234559360147,
+      0.3665558099746704,
+      0.4119440171591592
+    ],
+    "category": "ida",
+    "score": 135.16768970608712,
+    "best_candidate_score": 144.56777509003294,
+    "similar_episodes": [
+      "ida/ep_1773933905456_414851.json",
+      "ida/ep_1773937874860_59886.json",
+      "ida/ep_1773935732187_788131.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.368062",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/ida/ep_1773935483117_542538.json",
+    "fingerprint_7d": [
+      -0.005187095701694488,
+      0.3294585466384888,
+      -0.4606922889616204,
+      0.39745196783175296,
+      1.1073597440430967,
+      0.4316728115081787,
+      0.47801709406206067
+    ],
+    "category": "ida",
+    "score": 138.26612257003785,
+    "best_candidate_score": 147.80648872289814,
+    "similar_episodes": [
+      "ida/ep_1773935483117_542538.json",
+      "ida/ep_1773935218039_681919.json",
+      "ida/ep_1773934949726_17525.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.370782",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/ida/ep_1773935983777_53157.json",
+    "fingerprint_7d": [
+      -0.009373984485864639,
+      0.32564196586608884,
+      -0.45656902476250005,
+      0.4106391552411666,
+      1.0195638402409768,
+      0.4230763912200928,
+      0.43135339014765167
+    ],
+    "category": "ida",
+    "score": 140.67925070762635,
+    "best_candidate_score": 150.08670750517567,
+    "similar_episodes": [
+      "ida/ep_1773935983777_53157.json",
+      "ida/ep_1773933376465_1016942.json",
+      "ida/ep_1773935483117_542538.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.373607",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/ida/ep_1773934181976_379680.json",
+    "fingerprint_7d": [
+      -0.001110342051833868,
+      0.3118796110153198,
+      -0.45464369126841403,
+      0.3561451482137265,
+      1.2925996673521176,
+      0.3187580108642578,
+      0.41202649880896236
+    ],
+    "category": "ida",
+    "score": 135.2304165530205,
+    "best_candidate_score": 143.2299933573583,
+    "similar_episodes": [
+      "ida/ep_1773934181976_379680.json",
+      "ida/ep_1773933637742_981896.json",
+      "ida/ep_1773933905456_414851.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.376383",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/vuelta/ep_1773937736907_731586.json",
+    "fingerprint_7d": [
+      0.06434289813041687,
+      -0.20296692848205566,
+      0.5424656263646449,
+      0.3765893616326819,
+      1.2958645850891921,
+      0.5684850215911865,
+      0.7366796066336834
+    ],
+    "category": "vuelta",
+    "score": 127.76699130058289,
+    "best_candidate_score": 136.79230843664675,
+    "similar_episodes": [
+      "vuelta/ep_1773937736907_731586.json",
+      "vuelta/ep_1773935336081_1041452.json",
+      "vuelta/ep_1773937441938_571273.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.379294",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/vuelta/ep_1773935103784_463465.json",
+    "fingerprint_7d": [
+      0.07099038362503052,
+      -0.2232154369354248,
+      0.5448590692778349,
+      0.3947562990343809,
+      1.1147425350993225,
+      0.5704489350318909,
+      0.6359036919821588
+    ],
+    "category": "vuelta",
+    "score": 131.7229304409027,
+    "best_candidate_score": 139.52320879523674,
+    "similar_episodes": [
+      "vuelta/ep_1773935103784_463465.json",
+      "vuelta/ep_1773934835265_193913.json",
+      "vuelta/ep_1773938016714_804399.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.382084",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/vuelta/ep_1773935861774_80946.json",
+    "fingerprint_7d": [
+      0.06001964807510376,
+      -0.22346796989440917,
+      0.5393545880625291,
+      0.3920447234827058,
+      1.1705638063134023,
+      0.5143266916275024,
+      0.6020522098400688
+    ],
+    "category": "vuelta",
+    "score": 130.4338223028183,
+    "best_candidate_score": 139.73742576630738,
+    "similar_episodes": [
+      "vuelta/ep_1773935861774_80946.json",
+      "vuelta/ep_1773934048205_1033733.json",
+      "vuelta/ep_1773933512120_741130.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.384866",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/vuelta/ep_1773938016714_804399.json",
+    "fingerprint_7d": [
+      0.06982938647270202,
+      -0.22540283203125,
+      0.5413724358437182,
+      0.3910937469657927,
+      1.0930803775226288,
+      0.5362548828125,
+      0.5861696897530405
+    ],
+    "category": "vuelta",
+    "score": 132.3119263935089,
+    "best_candidate_score": 141.8977700425547,
+    "similar_episodes": [
+      "vuelta/ep_1773938016714_804399.json",
+      "vuelta/ep_1773935103784_463465.json",
+      "vuelta/ep_1773934835265_193913.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.387683",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/vuelta/ep_1773934364284_539808.json",
+    "fingerprint_7d": [
+      0.06944861412048339,
+      -0.1880484104156494,
+      0.5494266545519051,
+      0.37368313864961483,
+      1.273433007128614,
+      0.4897714853286743,
+      0.6236911753679416
+    ],
+    "category": "vuelta",
+    "score": 127.62858250141144,
+    "best_candidate_score": 132.80130548692134,
+    "similar_episodes": [
+      "vuelta/ep_1773934364284_539808.json",
+      "vuelta/ep_1773938016714_804399.json",
+      "vuelta/ep_1773935336081_1041452.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.390523",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/vuelta/ep_1773933773081_326281.json",
+    "fingerprint_7d": [
+      0.06293461918830871,
+      -0.23270597457885742,
+      0.5397418097231331,
+      0.38990473687002186,
+      1.1220230341874404,
+      0.5320336818695068,
+      0.5969540460211394
+    ],
+    "category": "vuelta",
+    "score": 132.36267459347843,
+    "best_candidate_score": 139.27118710120683,
+    "similar_episodes": [
+      "vuelta/ep_1773933773081_326281.json",
+      "vuelta/ep_1773933512120_741130.json",
+      "vuelta/ep_1773937200821_177562.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.393659",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/vuelta/ep_1773934048205_1033733.json",
+    "fingerprint_7d": [
+      0.0616248607635498,
+      -0.23498992919921874,
+      0.5365460529649961,
+      0.3904765711491411,
+      1.124275890718299,
+      0.5106785297393799,
+      0.5741435588934527
+    ],
+    "category": "vuelta",
+    "score": 132.56535507634283,
+    "best_candidate_score": 139.09706851020144,
+    "similar_episodes": [
+      "vuelta/ep_1773934048205_1033733.json",
+      "vuelta/ep_1773937200821_177562.json",
+      "vuelta/ep_1773935861774_80946.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.396512",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/vuelta/ep_1773934835265_193913.json",
+    "fingerprint_7d": [
+      0.06812387704849243,
+      -0.21849370002746582,
+      0.5411660657959128,
+      0.3887815731158313,
+      1.1236660357996915,
+      0.5766245126724243,
+      0.647933380299552
+    ],
+    "category": "vuelta",
+    "score": 131.40591167449952,
+    "best_candidate_score": 140.85895286561572,
+    "similar_episodes": [
+      "vuelta/ep_1773934835265_193913.json",
+      "vuelta/ep_1773935103784_463465.json",
+      "vuelta/ep_1773937441938_571273.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.399362",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/vuelta/ep_1773936102988_579680.json",
+    "fingerprint_7d": [
+      0.06834441423416138,
+      -0.24996752738952638,
+      0.5496128434107632,
+      0.41279412073120353,
+      0.9954376287664424,
+      0.5829119682312012,
+      0.5802525074356467
+    ],
+    "category": "vuelta",
+    "score": 135.00274317264558,
+    "best_candidate_score": 144.68290543699402,
+    "similar_episodes": [
+      "vuelta/ep_1773936102988_579680.json",
+      "vuelta/ep_1773933206787_869293.json",
+      "vuelta/ep_1773935103784_463465.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.402269",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/vuelta/ep_1773937441938_571273.json",
+    "fingerprint_7d": [
+      0.06585708856582642,
+      -0.20528457164764405,
+      0.546500564410694,
+      0.38754238518772394,
+      1.1808007827963747,
+      0.5962653160095215,
+      0.7040705518983706
+    ],
+    "category": "vuelta",
+    "score": 130.26534734249114,
+    "best_candidate_score": 136.39883324415507,
+    "similar_episodes": [
+      "vuelta/ep_1773937441938_571273.json",
+      "vuelta/ep_1773934835265_193913.json",
+      "vuelta/ep_1773937736907_731586.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.405291",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/vuelta/ep_1773933512120_741130.json",
+    "fingerprint_7d": [
+      0.061280477046966556,
+      -0.22846150398254395,
+      0.5359953261774989,
+      0.3840052412527278,
+      1.1240333808241934,
+      0.526843786239624,
+      0.5921900022131432
+    ],
+    "category": "vuelta",
+    "score": 131.47437786579133,
+    "best_candidate_score": 136.9159761868023,
+    "similar_episodes": [
+      "vuelta/ep_1773933512120_741130.json",
+      "vuelta/ep_1773933773081_326281.json",
+      "vuelta/ep_1773934048205_1033733.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.408314",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/vuelta/ep_1773935336081_1041452.json",
+    "fingerprint_7d": [
+      0.06364562511444091,
+      -0.2039996862411499,
+      0.5409953474421222,
+      0.3810674613038819,
+      1.2547747761022967,
+      0.5550888776779175,
+      0.6965115222051841
+    ],
+    "category": "vuelta",
+    "score": 128.7874638938904,
+    "best_candidate_score": 137.466894741491,
+    "similar_episodes": [
+      "vuelta/ep_1773935336081_1041452.json",
+      "vuelta/ep_1773937736907_731586.json",
+      "vuelta/ep_1773935599372_471573.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.411245",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/vuelta/ep_1773933206787_869293.json",
+    "fingerprint_7d": [
+      0.06814616322517394,
+      -0.2388439178466797,
+      0.5445847829897247,
+      0.407357543354084,
+      1.0645383921119498,
+      0.5736361742019653,
+      0.6106577305422105
+    ],
+    "category": "vuelta",
+    "score": 133.5875632996857,
+    "best_candidate_score": 142.49805558075184,
+    "similar_episodes": [
+      "vuelta/ep_1773933206787_869293.json",
+      "vuelta/ep_1773936102988_579680.json",
+      "vuelta/ep_1773935103784_463465.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.414205",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/vuelta/ep_1773937200821_177562.json",
+    "fingerprint_7d": [
+      0.062242317199707034,
+      -0.24428114891052247,
+      0.5418952375538482,
+      0.3953745952588033,
+      1.0623255719339935,
+      0.5172499418258667,
+      0.5494878402829887
+    ],
+    "category": "vuelta",
+    "score": 133.17411803245545,
+    "best_candidate_score": 140.79702118088503,
+    "similar_episodes": [
+      "vuelta/ep_1773937200821_177562.json",
+      "vuelta/ep_1773934048205_1033733.json",
+      "vuelta/ep_1773933773081_326281.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.417301",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/beta_final/vuelta/ep_1773935599372_471573.json",
+    "fingerprint_7d": [
+      0.06382278203964234,
+      -0.23050494194030763,
+      0.5396316015263802,
+      0.39511757296161143,
+      1.1695369173297385,
+      0.5621596574783325,
+      0.6574664728543507
+    ],
+    "category": "vuelta",
+    "score": 130.46204642295837,
+    "best_candidate_score": 138.27741471365525,
+    "similar_episodes": [
+      "vuelta/ep_1773935599372_471573.json",
+      "vuelta/ep_1773933773081_326281.json",
+      "vuelta/ep_1773935336081_1041452.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.420330",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/ida/ep_1773942173488_30142.json",
+    "fingerprint_7d": [
+      -0.006461440771818161,
+      0.31524603366851806,
+      -0.503067206850762,
+      0.46807153610802554,
+      0.96818284146751,
+      0.37039726972579956,
+      0.3586122810749323
+    ],
+    "category": "ida",
+    "score": 143.45096104860306,
+    "best_candidate_score": 152.46563792260983,
+    "similar_episodes": [
+      "ida/ep_1773942173488_30142.json",
+      "ida/ep_1773941772483_339691.json",
+      "ida/ep_1773940716038_166506.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.423319",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/ida/ep_1773941257102_509622.json",
+    "fingerprint_7d": [
+      0.006030712649226189,
+      0.3355720043182373,
+      -0.49168834220575086,
+      0.462606004226525,
+      0.9970115230059411,
+      0.5519899725914001,
+      0.5503403632573596
+    ],
+    "category": "ida",
+    "score": 140.17859635174275,
+    "best_candidate_score": 141.0840818833788,
+    "similar_episodes": [
+      "ida/ep_1773941257102_509622.json",
+      "ida/ep_1773940452846_430963.json",
+      "ida/ep_1773940264220_979621.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.427517",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/ida/ep_1773942960140_835159.json",
+    "fingerprint_7d": [
+      0.015217237174510956,
+      0.32912659645080566,
+      -0.5081743307098541,
+      0.45440888298797405,
+      0.9894666717072111,
+      0.5088863372802734,
+      0.5035260704259854
+    ],
+    "category": "ida",
+    "score": 141.43619165420532,
+    "best_candidate_score": 147.73858644478997,
+    "similar_episodes": [
+      "ida/ep_1773942960140_835159.json",
+      "ida/ep_1773943145222_87545.json",
+      "ida/ep_1773940264220_979621.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.431886",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/ida/ep_1773942368625_380654.json",
+    "fingerprint_7d": [
+      -0.0051388867199420925,
+      0.3343940734863281,
+      -0.4950003389328023,
+      0.46258035156980054,
+      0.9890731859328169,
+      0.4877026081085205,
+      0.48237357238963846
+    ],
+    "category": "ida",
+    "score": 140.35118946552276,
+    "best_candidate_score": 150.13935241735527,
+    "similar_episodes": [
+      "ida/ep_1773942368625_380654.json",
+      "ida/ep_1773940059914_454420.json",
+      "ida/ep_1773939600077_241754.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.435359",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/ida/ep_1773940716038_166506.json",
+    "fingerprint_7d": [
+      -0.0014212814159691334,
+      0.320322585105896,
+      -0.503785729581625,
+      0.44988131573242757,
+      0.9700435121566796,
+      0.34096044301986694,
+      0.33074646565348914
+    ],
+    "category": "ida",
+    "score": 141.61346511125564,
+    "best_candidate_score": 151.4920204059638,
+    "similar_episodes": [
+      "ida/ep_1773940716038_166506.json",
+      "ida/ep_1773941772483_339691.json",
+      "ida/ep_1773942173488_30142.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.438420",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/ida/ep_1773941526461_626098.json",
+    "fingerprint_7d": [
+      -0.015498031675815583,
+      0.3275612354278564,
+      -0.48721027373839254,
+      0.47623443251871356,
+      1.000125609412912,
+      0.454201340675354,
+      0.4542583926391001
+    ],
+    "category": "ida",
+    "score": 141.04700167179107,
+    "best_candidate_score": 147.86816606593584,
+    "similar_episodes": [
+      "ida/ep_1773941526461_626098.json",
+      "ida/ep_1773942628885_124279.json",
+      "ida/ep_1773940059914_454420.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.441591",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/ida/ep_1773943145222_87545.json",
+    "fingerprint_7d": [
+      0.008932490646839143,
+      0.3267007827758789,
+      -0.505142774500562,
+      0.4471546069282034,
+      1.0057196331818616,
+      0.47495728731155396,
+      0.4776738687720281
+    ],
+    "category": "ida",
+    "score": 141.201372756958,
+    "best_candidate_score": 148.92388365356237,
+    "similar_episodes": [
+      "ida/ep_1773943145222_87545.json",
+      "ida/ep_1773940264220_979621.json",
+      "ida/ep_1773942960140_835159.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.444737",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/ida/ep_1773941772483_339691.json",
+    "fingerprint_7d": [
+      -0.006182832270860672,
+      0.31416380405426025,
+      -0.49451660979052475,
+      0.4646297443389187,
+      0.9975262414841929,
+      0.36432963609695435,
+      0.3634283725570986
+    ],
+    "category": "ida",
+    "score": 142.5817360854149,
+    "best_candidate_score": 150.53177866895146,
+    "similar_episodes": [
+      "ida/ep_1773941772483_339691.json",
+      "ida/ep_1773942173488_30142.json",
+      "ida/ep_1773940716038_166506.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.448264",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/ida/ep_1773940059914_454420.json",
+    "fingerprint_7d": [
+      -0.005571888014674187,
+      0.3329686880111694,
+      -0.49381813042416145,
+      0.4833965223837098,
+      1.0046717520499793,
+      0.48357224464416504,
+      0.4858313742693945
+    ],
+    "category": "ida",
+    "score": 141.22488631367685,
+    "best_candidate_score": 150.18133817708122,
+    "similar_episodes": [
+      "ida/ep_1773940059914_454420.json",
+      "ida/ep_1773942368625_380654.json",
+      "ida/ep_1773939600077_241754.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.452664",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/ida/ep_1773940264220_979621.json",
+    "fingerprint_7d": [
+      0.0052408620715141295,
+      0.33138289451599123,
+      -0.5012839365925524,
+      0.46856912418895785,
+      0.9933933887880209,
+      0.5046439170837402,
+      0.5013099309230777
+    ],
+    "category": "ida",
+    "score": 141.58259731292725,
+    "best_candidate_score": 150.77572355937133,
+    "similar_episodes": [
+      "ida/ep_1773940264220_979621.json",
+      "ida/ep_1773943350009_363617.json",
+      "ida/ep_1773940452846_430963.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.456691",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/ida/ep_1773939600077_241754.json",
+    "fingerprint_7d": [
+      0.0004250072408467531,
+      0.3331847906112671,
+      -0.49711703551682496,
+      0.46804280426822403,
+      1.000098488865917,
+      0.4853564500808716,
+      0.4854042522872056
+    ],
+    "category": "ida",
+    "score": 142.55790522813797,
+    "best_candidate_score": 146.69151288701624,
+    "similar_episodes": [
+      "ida/ep_1773939600077_241754.json",
+      "ida/ep_1773943350009_363617.json",
+      "ida/ep_1773940264220_979621.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.459917",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/ida/ep_1773943350009_363617.json",
+    "fingerprint_7d": [
+      0.0030244413763284685,
+      0.33409757614135743,
+      -0.502711969583427,
+      0.4641463203963359,
+      1.003100222623049,
+      0.5068244934082031,
+      0.5083957621685826
+    ],
+    "category": "ida",
+    "score": 139.88531821548938,
+    "best_candidate_score": 149.02041432033207,
+    "similar_episodes": [
+      "ida/ep_1773943350009_363617.json",
+      "ida/ep_1773940264220_979621.json",
+      "ida/ep_1773940452846_430963.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.463159",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/ida/ep_1773941982335_859515.json",
+    "fingerprint_7d": [
+      0.0021461989730596543,
+      0.32392578125,
+      -0.5048807075963906,
+      0.45426658048790974,
+      1.0019587908048944,
+      0.4390578269958496,
+      0.43991784943018597
+    ],
+    "category": "ida",
+    "score": 141.3612554168701,
+    "best_candidate_score": 150.57906698237363,
+    "similar_episodes": [
+      "ida/ep_1773941982335_859515.json",
+      "ida/ep_1773939600077_241754.json",
+      "ida/ep_1773943350009_363617.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.466424",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/ida/ep_1773940452846_430963.json",
+    "fingerprint_7d": [
+      0.005169301852583885,
+      0.33530683517456056,
+      -0.5012398187136801,
+      0.47225145026518944,
+      0.9929118370681271,
+      0.5287688970565796,
+      0.5250208969609358
+    ],
+    "category": "ida",
+    "score": 142.75406377077104,
+    "best_candidate_score": 151.54303751278988,
+    "similar_episodes": [
+      "ida/ep_1773940452846_430963.json",
+      "ida/ep_1773940264220_979621.json",
+      "ida/ep_1773941257102_509622.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.469759",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/ida/ep_1773942628885_124279.json",
+    "fingerprint_7d": [
+      -0.02017834484577179,
+      0.3289093255996704,
+      -0.4870668255160613,
+      0.48537513510099334,
+      1.007323492118292,
+      0.4788725972175598,
+      0.48237961690894865
+    ],
+    "category": "ida",
+    "score": 141.7204420733452,
+    "best_candidate_score": 149.19891975910934,
+    "similar_episodes": [
+      "ida/ep_1773942628885_124279.json",
+      "ida/ep_1773941526461_626098.json",
+      "ida/ep_1773940059914_454420.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.473184",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/vuelta/ep_1773939415576_925085.json",
+    "fingerprint_7d": [
+      0.0002356520388275385,
+      -0.3423203468322754,
+      0.5001107260839072,
+      0.47902303658802475,
+      0.9862483745486105,
+      0.11819171905517578,
+      0.11656639080327315
+    ],
+    "category": "vuelta",
+    "score": 136.88523485004902,
+    "best_candidate_score": 145.73336178887428,
+    "similar_episodes": [
+      "vuelta/ep_1773939415576_925085.json",
+      "vuelta/ep_1773940359857_82476.json",
+      "vuelta/ep_1773940620729_390819.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.476524",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/vuelta/ep_1773940158815_792994.json",
+    "fingerprint_7d": [
+      0.00765022337436676,
+      -0.3481516599655151,
+      0.5011735038707791,
+      0.4822417184563718,
+      0.9758246457383967,
+      0.2223057746887207,
+      0.2169314538312207
+    ],
+    "category": "vuelta",
+    "score": 137.07829944089056,
+    "best_candidate_score": 146.2349134201379,
+    "similar_episodes": [
+      "vuelta/ep_1773940158815_792994.json",
+      "vuelta/ep_1773939852834_559458.json",
+      "vuelta/ep_1773941880516_354559.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.479864",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/vuelta/ep_1773942458955_52557.json",
+    "fingerprint_7d": [
+      0.005764707922935486,
+      -0.31724257469177247,
+      0.5122767324663486,
+      0.4589078733429027,
+      0.9961460191399726,
+      0.1840224266052246,
+      0.18331320769527226
+    ],
+    "category": "vuelta",
+    "score": 136.4473906607926,
+    "best_candidate_score": 143.43705013323995,
+    "similar_episodes": [
+      "vuelta/ep_1773942458955_52557.json",
+      "vuelta/ep_1773939852834_559458.json",
+      "vuelta/ep_1773941880516_354559.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.483625",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/vuelta/ep_1773940359857_82476.json",
+    "fingerprint_7d": [
+      0.0029606347903609275,
+      -0.32881271839141846,
+      0.49896111119651604,
+      0.4712900031688297,
+      0.9654190018409231,
+      0.1358858346939087,
+      0.131186766894514
+    ],
+    "category": "vuelta",
+    "score": 137.4574656768143,
+    "best_candidate_score": 146.23245536114783,
+    "similar_episodes": [
+      "vuelta/ep_1773940359857_82476.json",
+      "vuelta/ep_1773940620729_390819.json",
+      "vuelta/ep_1773939415576_925085.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.487124",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/vuelta/ep_1773942791214_184352.json",
+    "fingerprint_7d": [
+      0.008050411939620972,
+      -0.3545091152191162,
+      0.49658511528712146,
+      0.48494592673368403,
+      0.9846676017581858,
+      0.3166487216949463,
+      0.31179373739115795
+    ],
+    "category": "vuelta",
+    "score": 137.8024105396867,
+    "best_candidate_score": 144.06937070372467,
+    "similar_episodes": [
+      "vuelta/ep_1773942791214_184352.json",
+      "vuelta/ep_1773941677392_199021.json",
+      "vuelta/ep_1773940158815_792994.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.490553",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/vuelta/ep_1773943053117_581232.json",
+    "fingerprint_7d": [
+      -0.00036654036957770584,
+      -0.31143462657928467,
+      0.4953487936247438,
+      0.45269224661561847,
+      0.9802976307596774,
+      0.19722998142242432,
+      0.19334408350317775
+    ],
+    "category": "vuelta",
+    "score": 136.96694012120366,
+    "best_candidate_score": 146.7921270173834,
+    "similar_episodes": [
+      "vuelta/ep_1773943053117_581232.json",
+      "vuelta/ep_1773942458955_52557.json",
+      "vuelta/ep_1773942075116_601597.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.493993",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/vuelta/ep_1773941373286_651299.json",
+    "fingerprint_7d": [
+      0.0231658935546875,
+      -0.31623315811157227,
+      0.5210345310728881,
+      0.4543048176194118,
+      0.994234262437711,
+      0.35824620723724365,
+      0.3561806536236283
+    ],
+    "category": "vuelta",
+    "score": 136.42577521756292,
+    "best_candidate_score": 146.3816412603012,
+    "similar_episodes": [
+      "vuelta/ep_1773941373286_651299.json",
+      "vuelta/ep_1773941677392_199021.json",
+      "vuelta/ep_1773942791214_184352.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.497492",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/vuelta/ep_1773941880516_354559.json",
+    "fingerprint_7d": [
+      0.005471761524677277,
+      -0.34091835021972655,
+      0.501998337178131,
+      0.4716855339067067,
+      0.9765944998802368,
+      0.1815335750579834,
+      0.17728469094522273
+    ],
+    "category": "vuelta",
+    "score": 138.3951966419816,
+    "best_candidate_score": 145.3203984062306,
+    "similar_episodes": [
+      "vuelta/ep_1773941880516_354559.json",
+      "vuelta/ep_1773939852834_559458.json",
+      "vuelta/ep_1773942458955_52557.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.500984",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/vuelta/ep_1773942075116_601597.json",
+    "fingerprint_7d": [
+      -0.006539852917194366,
+      -0.31675214767456056,
+      0.4992950323690347,
+      0.4482338278696848,
+      0.9702940661465037,
+      0.21639442443847656,
+      0.20996622597984177
+    ],
+    "category": "vuelta",
+    "score": 141.9832465147972,
+    "best_candidate_score": 151.60529451058142,
+    "similar_episodes": [
+      "vuelta/ep_1773942075116_601597.json",
+      "vuelta/ep_1773943053117_581232.json",
+      "vuelta/ep_1773941147724_356591.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.504428",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/vuelta/ep_1773941147724_356591.json",
+    "fingerprint_7d": [
+      -0.009855283051729202,
+      -0.3132521390914917,
+      0.49204307868894415,
+      0.4604283484051195,
+      0.9780133151283996,
+      0.26668620109558105,
+      0.26082265563248824
+    ],
+    "category": "vuelta",
+    "score": 136.30172259286047,
+    "best_candidate_score": 141.4864689390253,
+    "similar_episodes": [
+      "vuelta/ep_1773941147724_356591.json",
+      "vuelta/ep_1773942075116_601597.json",
+      "vuelta/ep_1773942274697_663647.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.508064",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/vuelta/ep_1773942274697_663647.json",
+    "fingerprint_7d": [
+      -0.012798479199409485,
+      -0.3445565223693848,
+      0.49581825995043805,
+      0.4815536879480593,
+      0.9645131106305999,
+      0.31747967004776,
+      0.3062133041197415
+    ],
+    "category": "vuelta",
+    "score": 143.63682196497916,
+    "best_candidate_score": 153.2389827221955,
+    "similar_episodes": [
+      "vuelta/ep_1773942274697_663647.json",
+      "vuelta/ep_1773941147724_356591.json",
+      "vuelta/ep_1773942075116_601597.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.513283",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/vuelta/ep_1773941677392_199021.json",
+    "fingerprint_7d": [
+      0.011526427417993545,
+      -0.34268014430999755,
+      0.5092924692893963,
+      0.46585717727897713,
+      0.9859603937988265,
+      0.2849932909011841,
+      0.28099209732695496
+    ],
+    "category": "vuelta",
+    "score": 136.31006428673862,
+    "best_candidate_score": 144.5776571740959,
+    "similar_episodes": [
+      "vuelta/ep_1773941677392_199021.json",
+      "vuelta/ep_1773942791214_184352.json",
+      "vuelta/ep_1773940158815_792994.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.517116",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/vuelta/ep_1773939852834_559458.json",
+    "fingerprint_7d": [
+      0.007006064057350159,
+      -0.3266063451766968,
+      0.5064574097008672,
+      0.46800783011474734,
+      0.9791064943239371,
+      0.19367533922195435,
+      0.18962878242260706
+    ],
+    "category": "vuelta",
+    "score": 137.52390347778797,
+    "best_candidate_score": 143.29476538320978,
+    "similar_episodes": [
+      "vuelta/ep_1773939852834_559458.json",
+      "vuelta/ep_1773942458955_52557.json",
+      "vuelta/ep_1773941880516_354559.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.521976",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/vuelta/ep_1773943258708_398439.json",
+    "fingerprint_7d": [
+      0.00012266123667359352,
+      -0.3038297176361084,
+      0.49878425248216796,
+      0.45271723528666635,
+      0.9981985309012233,
+      0.2676391005516052,
+      0.26715695698233716
+    ],
+    "category": "vuelta",
+    "score": 137.6504725161195,
+    "best_candidate_score": 147.4050066751215,
+    "similar_episodes": [
+      "vuelta/ep_1773943258708_398439.json",
+      "vuelta/ep_1773943053117_581232.json",
+      "vuelta/ep_1773942075116_601597.json"
+    ],
+    "mutations_evaluated": 10
+  },
+  {
+    "timestamp": "2026-03-26T19:11:23.525686",
+    "episode_file": "/home/usuario/robocomp/components/beta-robotica-class/ainf_slamo/episodic_memory/inicio_fin_pasillo/vuelta/ep_1773940620729_390819.json",
+    "fingerprint_7d": [
+      0.0029438670724630358,
+      -0.3304968595504761,
+      0.502687640948852,
+      0.4615998376217369,
+      0.9771281316916588,
+      0.13395678997039795,
+      0.13089294791118689
+    ],
+    "category": "vuelta",
+    "score": 138.2680688467622,
+    "best_candidate_score": 147.16766402113777,
+    "similar_episodes": [
+      "vuelta/ep_1773940620729_390819.json",
+      "vuelta/ep_1773940359857_82476.json",
+      "vuelta/ep_1773939415576_925085.json"
+    ],
+    "mutations_evaluated": 10
+  }
+]

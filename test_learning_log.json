@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "created_at": "2026-04-09T17:56:37.042963",
+    "updated_at": "2026-04-09T17:56:37.043170",
+    "total_missions": 2,
+    "improvements": 1,
+    "failures": 1
+  },
+  "improvements": [
+    {
+      "timestamp": "2026-04-09T17:56:37.043014",
+      "type": "improvement",
+      "episode_id": "ep_new_001",
+      "best_match_id": "ep_1773933512120_741130",
+      "similarity_score": 0.82,
+      "improvement": {
+        "delta": 11.299999999999997,
+        "from": 43.5,
+        "to": 54.8
+      },
+      "perturbation": {
+        "parameter": "base_speed"
+      },
+      "query_fingerprint_7d": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7
+      ],
+      "metadata": {
+        "terrain": "indoor",
+        "weather": "clear"
+      }
+    }
+  ],
+  "failures": [
+    {
+      "timestamp": "2026-04-09T17:56:37.043165",
+      "type": "failure",
+      "episode_id": "ep_new_002",
+      "best_match_id": "ep_1773937200821_177562",
+      "similarity_score": 0.68,
+      "performance": {
+        "delta": -90.1,
+        "from": 52.1,
+        "to": -38.0
+      },
+      "perturbation": {
+        "parameter": "angular_velocity"
+      },
+      "query_fingerprint_7d": [
+        0.15,
+        0.25,
+        0.35,
+        0.45,
+        0.55,
+        0.65,
+        0.75
+      ],
+      "metadata": {
+        "terrain": "outdoor",
+        "obstacles": "high"
+      }
+    }
+  ]
+}

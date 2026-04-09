@@ -20,9 +20,14 @@ import numpy as np
 try:
     # When imported as a package module
     from .episodic_improver import FingerprintModel, MissionSpec, EpisodeMetadata
+    from .episodic_improver_7d import EpisodicImprover7D
 except ImportError:
     # When run directly
     from episodic_improver import FingerprintModel, MissionSpec, EpisodeMetadata
+    try:
+        from episodic_improver_7d import EpisodicImprover7D
+    except ImportError:
+        EpisodicImprover7D = None
 
 
 logger = logging.getLogger(__name__)
@@ -101,6 +106,7 @@ class RecommendationEngine:
         self.model = FingerprintModel(
             quality_threshold=config.outcome_quality_threshold
         )
+        self.improver_7d = None  # Optional 7D system for new pipeline
         
         # Load existing index if path provided
         if config.fingerprint_index_path:
@@ -112,6 +118,35 @@ class RecommendationEngine:
                 logger.warning(
                     f"Failed to load index from {config.fingerprint_index_path}"
                 )
+    
+    def enable_7d_system(self, index_7d_path: Optional[Path] = None) -> bool:
+        """
+        Enable the 7D episodic improver system for recommendations.
+        
+        Args:
+            index_7d_path: Path to 7D index JSON file.
+        
+        Returns:
+            True if 7D system initialized successfully, False otherwise.
+        """
+        if EpisodicImprover7D is None:
+            logger.warning("EpisodicImprover7D not available, 7D system disabled")
+            return False
+        
+        try:
+            if index_7d_path and Path(index_7d_path).exists():
+                self.improver_7d = EpisodicImprover7D(
+                    index_path=str(index_7d_path),
+                    learning_log_path="./episodic_memory/learning_log.json"
+                )
+                logger.info(f"✓ 7D system enabled with index: {index_7d_path}")
+                return True
+            else:
+                logger.warning(f"7D index path not found or not provided: {index_7d_path}")
+                return False
+        except Exception as e:
+            logger.error(f"Failed to initialize 7D system: {e}")
+            return False
     
     def add_episode(
         self,
@@ -264,6 +299,142 @@ class RecommendationEngine:
                 "recommendations": [],
                 "status": f"error: {str(e)}",
                 "statistics": {}
+            }
+    
+    def generate_recommendations_7d(
+        self,
+        query_id: str,
+        mission_spec: MissionSpec,
+    ) -> Dict:
+        """
+        Generate parameter recommendations using the 7D system (PRE-MISIÓN).
+        
+        Uses EpisodicImprover7D for advanced fingerprint extraction and
+        adaptive perturbation based on similarity scaling.
+        
+        Args:
+            query_id: Query identifier for tracing.
+            mission_spec: MissionSpec describing the target mission.
+        
+        Returns:
+            Dictionary with 7D recommendations or error status.
+        """
+        if self.improver_7d is None:
+            logger.warning(f"7D system not initialized for query {query_id}. Falling back to standard engine.")
+            return self.generate_recommendations(query_id, mission_spec)
+        
+        try:
+            logger.info(f"Generating 7D recommendations for query {query_id}")
+            
+            # Use 7D system for PRE-MISIÓN prediction
+            prediction = self.improver_7d.pre_mission_prediction(
+                src_x=mission_spec.start_x,
+                src_y=mission_spec.start_y,
+                target_x=mission_spec.end_x,
+                target_y=mission_spec.end_y,
+                obstacle_density=mission_spec.obstacle_density,
+                estimated_distance=mission_spec.estimated_distance
+            )
+            
+            if prediction['status'] != 'ready':
+                return {
+                    "query_id": query_id,
+                    "system": "7d",
+                    "mission_spec": mission_spec.to_dict(),
+                    "recommendations": [],
+                    "status": f"7d_prediction_failed: {prediction.get('error', 'unknown')}",
+                    "statistics": {}
+                }
+            
+            # Extract prediction results
+            best_match_id = prediction['best_match_id']
+            similarity = prediction['best_match_similarity']
+            predicted_params = prediction['predicted_params']
+            search_results = prediction['search_results']
+            
+            # Build recommendation entries from 7D search results
+            recommendations = []
+            for result in search_results:
+                recommendation = {
+                    "rank": result['rank'],
+                    "source_episode_id": result['episode_id'],
+                    "similarity": float(result['similarity_score']),
+                    "source_quality_scores": {
+                        "composite_score": result.get('composite_score', None),
+                    },
+                    "nominal_parameters": {},  # Not available in 7D system
+                    "perturbation_info": {
+                        "strategy": "7d_adaptive_sigma",
+                        "sigma_pct": None,  # Handled by 7D system internally
+                    },
+                    "recommended_parameters": predicted_params if result['rank'] == 1 else None,
+                }
+                recommendations.append(recommendation)
+            
+            return {
+                "query_id": query_id,
+                "system": "7d",
+                "mission_spec": mission_spec.to_dict(),
+                "fingerprint_7d": prediction['fingerprint_7d'],
+                "recommendations": recommendations,
+                "best_match_id": best_match_id,
+                "best_match_similarity": similarity,
+                "predicted_parameters": predicted_params,
+                "perturbation_details": prediction.get('perturbation', {}),
+                "status": "success",
+                "statistics": {
+                    "mean_similarity": similarity,
+                    "search_depth": len(search_results),
+                    "best_match_found": True,
+                }
+            }
+        
+        except Exception as e:
+            logger.error(f"Error in 7D recommendation generation for {query_id}: {e}")
+            import traceback
+            traceback.print_exc()
+            return {
+                "query_id": query_id,
+                "system": "7d",
+                "mission_spec": mission_spec.to_dict(),
+                "recommendations": [],
+                "status": f"error: {str(e)}",
+                "statistics": {}
+            }
+    
+    def post_mission_evaluation_7d(self, mission_outcome: Dict) -> Dict:
+        """
+        Evaluate mission outcome using 7D system (POST-MISIÓN).
+        
+        Registers improvements/failures in the learning log and updates statistics.
+        
+        Args:
+            mission_outcome: Result from SLAMO including composite_score.
+        
+        Returns:
+            Dictionary with evaluation results.
+        """
+        if self.improver_7d is None:
+            logger.warning("7D system not available for post-mission evaluation")
+            return {
+                "status": "error",
+                "error": "7D system not initialized",
+            }
+        
+        try:
+            evaluation = self.improver_7d.post_mission_evaluation(mission_outcome)
+            logger.info(
+                f"Mission outcome evaluated: "
+                f"improvement={evaluation.get('is_improvement', False)}, "
+                f"delta={evaluation.get('improvement_delta', 0):.2f}"
+            )
+            return evaluation
+        
+        except Exception as e:
+            logger.error(f"Error in post-mission evaluation: {e}")
+            return {
+                "status": "error",
+                "error": str(e),
             }
     
     def save_index(self, filepath: str) -> bool:

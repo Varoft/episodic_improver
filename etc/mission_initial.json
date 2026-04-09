@@ -1,0 +1,30 @@
+{
+  "mission_id": "slamo_m0001_94824",
+  "timestamp": 1775753594.824276,
+  "start_x": 54.51,
+  "start_y": 39.89,
+  "end_x": 39.32,
+  "end_y": 22.14,
+  "estimated_distance": 23.36,
+  "obstacle_density": 0.2,
+  "room_width": 80.0,
+  "room_height": 80.0,
+  "control_params": {
+    "base_speed": 0.35,
+    "max_adv_speed": 0.75,
+    "angular_velocity": 0.95,
+    "angular_acceleration": 1.5,
+    "accel_limit": 0.25,
+    "decel_limit": 0.3
+  },
+  "success": false,
+  "time_to_goal_s": 11.42,
+  "collisions": 5,
+  "blocked_time_s": 2.25,
+  "composite_score": 0.205,
+  "execution_details": {
+    "environment_difficulty": 0.1,
+    "success_probability": 0.81,
+    "param_quality": 0.75
+  }
+}

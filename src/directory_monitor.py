@@ -85,6 +85,32 @@ class QueryEventHandler(FileSystemEventHandler):
             self.on_query_create(path)
 
 
+class MissionEventHandler(FileSystemEventHandler):
+    """Handles file events for mission initial files."""
+    
+    def __init__(self, on_mission_create: Callable[[Path], None]):
+        """
+        Initialize handler.
+        
+        Args:
+            on_mission_create: Callback when mission_initial.json is detected.
+        """
+        super().__init__()
+        self.on_mission_create = on_mission_create
+    
+    def on_created(self, event: FileCreatedEvent) -> None:
+        """Handle file creation events."""
+        if event.is_directory:
+            return
+        
+        path = Path(event.src_path)
+        
+        # Only interested in mission_initial.json files
+        if path.name == "mission_initial.json":
+            logger.info(f"New mission detected: {path}")
+            self.on_mission_create(path)
+
+
 class DirectoryMonitor:
     """
     Monitors episodic memory and query directories.
@@ -105,6 +131,7 @@ class DirectoryMonitor:
         self.observer = Observer()
         self.episode_handlers: List[EpisodeEventHandler] = []
         self.query_handlers: List[QueryEventHandler] = []
+        self.mission_handlers: List[MissionEventHandler] = []
         self._stop_event = Event()
         self._cleanup_thread: Optional[Thread] = None
         
@@ -136,6 +163,16 @@ class DirectoryMonitor:
         handler = QueryEventHandler(callback)
         self.query_handlers.append(handler)
     
+    def register_mission_callback(self, callback: Callable[[Path], None]) -> None:
+        """
+        Register callback for mission_initial.json files.
+        
+        Args:
+            callback: Function(path: Path) called when mission_initial.json detected.
+        """
+        handler = MissionEventHandler(callback)
+        self.mission_handlers.append(handler)
+    
     def start(self) -> None:
         """Start monitoring directories."""
         # Create directories if they don't exist
@@ -162,6 +199,12 @@ class DirectoryMonitor:
             for handler in self.query_handlers:
                 self.observer.schedule(handler, str(self.config.query_dir), recursive=False)
             logger.info(f"Registered query monitoring in: {self.config.query_dir}")
+        
+        # Register mission handlers
+        if self.mission_handlers:
+            for handler in self.mission_handlers:
+                self.observer.schedule(handler, str(self.config.query_dir), recursive=False)
+            logger.info(f"Registered mission_initial.json monitoring in: {self.config.query_dir}")
         
         # Start observer
         self.observer.start()

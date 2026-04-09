@@ -1,0 +1,29 @@
+{
+  "mission_id": "test_mission_001",
+  "timestamp_ms": 1775753106499,
+  "mission_spec": {
+    "start_x": 10.0,
+    "start_y": 15.0,
+    "end_x": 50.0,
+    "end_y": 45.0,
+    "estimated_distance": 55.0,
+    "obstacle_density": 0.45
+  },
+  "control_params": {
+    "base_speed": 0.35,
+    "max_adv_speed": 0.75,
+    "angular_velocity": 0.95,
+    "angular_acceleration": 1.5,
+    "accel_limit": 0.25,
+    "decel_limit": 0.3169277755077843
+  },
+  "predicted_from_episode": "ep_1773938016714_804399",
+  "similarity_score": 0.670612045989204,
+  "mission_outcome": {
+    "success": true,
+    "time_to_goal_s": 42.5,
+    "collisions": 0,
+    "blocked_time_s": 0.0,
+    "composite_score": 57.5
+  }
+}
