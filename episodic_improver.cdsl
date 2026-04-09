@@ -1,0 +1,7 @@
+Component episodic_improver
+{
+	Communications{};
+	
+	language python;
+	gui Qt(QWidget);
+};

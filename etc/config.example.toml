@@ -1,0 +1,101 @@
+# Episodic Improver Configuration
+# ================================
+# This file contains all configurable parameters for the episodic improver component.
+# Remove comments and rename to config.toml to use.
+
+[directories]
+# Base directory for episodic memory storage
+episodic_memory_dir = "episodic_memory"
+
+# Directory for queries and recommendations
+query_dir = "etc"
+
+# Directory for recommendation output files
+recommendations_dir = "etc/recommendations"
+
+# Path to save/load fingerprint index
+index_file = "etc/fingerprint_index.json"
+
+
+[monitoring]
+# Enable directory monitoring
+enabled = true
+
+# Time-to-live for orphaned recommendation files (seconds)
+# Files older than this are removed during cleanup
+ttl_seconds = 300
+
+# How often to check for orphaned files (seconds)
+cleanup_interval_seconds = 60
+
+# Watch episodic_memory recursively for new episodes
+recursive_watch = true
+
+
+[fingerprint]
+# Minimum outcome quality required to include episode in recommendations
+# Episodes with lower quality are filtered out
+# Valid range: [0, 1]
+outcome_quality_threshold = 0.70
+
+# Number of similar episodes to retrieve for each query
+k_neighbors = 3
+
+# Weights for 9D fingerprint similarity computation
+# Order: [start_x, start_y, end_x, end_y, heading, distance, tortuosity, density, hardness]
+# Sum should be 1.0 for interpretability
+similarity_weights = [
+    0.08,   # start_x: low weight (location less important)
+    0.08,   # start_y: low weight
+    0.12,   # end_x: medium weight (destination matters)
+    0.12,   # end_y: medium weight
+    0.20,   # heading: high weight (direction critical for control)
+    0.10,   # distance: medium weight
+    0.15,   # tortuosity: high weight (path complexity)
+    0.10,   # density: medium weight
+    0.05,   # hardness: low weight (redundant with tortuosity×density)
+]
+
+
+[perturbation]
+# Perturbation strategy when mean similarity is HIGH (>0.95)
+# Use tight perturbation for exploitation of well-covered regions
+tight_sigma_pct = 3.0
+
+# Perturbation strategy when mean similarity is LOW (<0.80)
+# Use broad perturbation for exploration of sparse regions
+broad_sigma_pct = 10.0
+
+# Threshold for switching to tight exploitation
+# If mean_similarity > tight_threshold, use tight_sigma_pct
+tight_threshold = 0.95
+
+# Threshold for switching to broad exploration
+# If mean_similarity < broad_threshold, use broad_sigma_pct
+# Linear interpolation is used between thresholds
+broad_threshold = 0.80
+
+
+# Parameter ranges for navigation controller
+# Each parameter must have min and max values
+# Recommended parameters will be bounded to these ranges
+
+[controller.goal_tolerance]
+min = 0.05     # Minimum acceptable tolerance (m)
+max = 0.50     # Maximum acceptable tolerance (m)
+
+[controller.max_velocity]
+min = 0.1      # Minimum safe velocity (m/s)
+max = 2.0      # Maximum safe velocity (m/s)
+
+[controller.max_angular_velocity]
+min = 0.2      # Minimum safe angular velocity (rad/s)
+max = 3.0      # Maximum safe angular velocity (rad/s)
+
+[controller.acceleration]
+min = 0.1      # Minimum safe acceleration (m/s²)
+max = 1.0      # Maximum safe acceleration (m/s²)
+
+[controller.angular_acceleration]
+min = 0.1      # Minimum safe angular acceleration (rad/s²)
+max = 1.0      # Maximum safe angular acceleration (rad/s²)
