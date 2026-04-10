@@ -1,6 +1,6 @@
 # Episodic Improver - Quick Start Guide
 
-Get the system running in 5 minutes.
+**7D Episodic Learning System** - Get the system running in 5 minutes.
 
 ---
 

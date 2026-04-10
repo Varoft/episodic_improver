@@ -21,19 +21,28 @@ pytest tests/ -v
 
 ## Documentation
 
-Most users should start here:
+**🎓 For Students (Understanding the System):**
+1. **[CONCEPT.md](documentation/CONCEPT.md)** ← Start here! What is Episodic Improver and how it works
+2. **[FLUJO_COMPLETO.md](documentation/FLUJO_COMPLETO.md)** ← Complete workflow PRE-Misión → Execution → POST-Misión (with diagrams!)
+3. **[ANALISIS_EJEMPLO_REAL.md](documentation/ANALISIS_EJEMPLO_REAL.md)** ← Real mission example analyzed step-by-step
 
-1. **[QUICKSTART.md](QUICKSTART.md)** ← Start here for 5-minute setup
-2. **[DOCS.md](DOCS.md)** ← Complete technical reference
-3. **[CHANGELOG.md](CHANGELOG.md)** ← Implementation history
+**🔧 For Integration (Using the System):**
+1. **[QUICKSTART.md](documentation/QUICKSTART.md)** ← 5-minute setup
+2. **[PROTOCOL.md](documentation/PROTOCOL.md)** ← PRE-MISIÓN integration specification (file formats)
+3. **[DOCS.md](documentation/DOCS.md)** ← Complete technical reference
+
+**📋 Reference:**
+- **[CHANGELOG.md](documentation/CHANGELOG.md)** ← Implementation history
+- **[DOCUMENTACION_7D.md](documentation/DOCUMENTACION_7D.md)** ← 7D fingerprint technical details (formulas, ranges)
 
 ## Key Features
 
-✅ **9D Trajectory Fingerprinting** — Vector representation of robot navigation paths  
-✅ **Real-time Episode Monitoring** — Automatic episode detection via filesystem events  
-✅ **k-NN Similarity Retrieval** — Find comparable episodes from history  
-✅ **Adaptive Recommendations** — Suggest parameter adjustments for next attempt  
-✅ **TOML Configuration** — All parameters tunable without code changes  
+✅ **7D Geometric Fingerprinting** — Normalized pre-mission descriptors for parameter prediction  
+✅ **Real-time Episode Monitoring** — Automatic mission detection via filesystem events  
+✅ **k-NN Similarity Retrieval** — Find comparable historical missions  
+✅ **Adaptive Parameter Prediction** — Perturb parameters based on similar episodes (PRE-misión)  
+✅ **Learning Log Tracking** — Track improvements and failures for continuous learning  
+✅ **TOML Configuration** — All system parameters tunable without code changes  
 ✅ **Full Test Coverage** — 32 tests across all phases (fingerprint, integration, config)
 
 ## Project Structure

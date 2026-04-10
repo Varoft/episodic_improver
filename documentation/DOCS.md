@@ -1,5 +1,15 @@
 # Episodic Improver - Technical Documentation
 
+**⚠️ NOTA:** Este documento describe la arquitectura del sistema con el modelo histórico **9D**. 
+
+Para la especificación actual del sistema (**7D fingerprinting geométrico PRE-misión**), ver:
+- **[DOCUMENTACION_7D.md](DOCUMENTACION_7D.md)** - Especificación técnica 7D (actual)
+- **[FLUJO_COMPLETO.md](FLUJO_COMPLETO.md)** - Arquitectura completa PRE→EJE→POST
+
+Este documento se mantiene como referencia histórica. La mayoría de información aquí es similar en concepto pero aplicada al sistema 7D nuevo.
+
+---
+
 Complete technical reference for the episodic memory fingerprinting system.
 
 ---
@@ -26,7 +36,7 @@ Input Episodes (JSON)
         ↓
 DirectoryMonitor (watchdog)
         ↓
-FingerprintModel (9D vectorization)
+FingerprintModel (7D geometric vectorization)
         ↓
 RecommendationEngine (k-NN + perturbation)
         ↓
@@ -36,7 +46,7 @@ Output Recommendations (JSON)
 **Core Pipeline:**
 
 1. **DirectoryMonitor** - Real-time detection of new episode files
-2. **FingerprintModel** - Convert mission trajectories to 9D fingerprints
+2. **FingerprintModel** - Convert mission geometry to 7D normalized fingerprints (PRE-misión prediction)
 3. **RecommendationEngine** - Find similar episodes and suggest parameter adjustments
 4. **ConfigManager** - Load system configuration from TOML files
 5. **EpisodicImproverComponent** - Orchestrate all components
@@ -112,7 +122,7 @@ class FingerprintModel:
         """Generate perturbed parameter recommendations"""
 ```
 
-**Fingerprint Dimensions (9D):**
+**Fingerprint Dimensions (7D) - Geometric & Normalized:**
 
 | Dim | Name | Range | Computation |
 |-----|------|-------|-------------|
@@ -262,7 +272,7 @@ Config
 ├── FingerprintConfig
 │   ├── outcome_quality_threshold: float (min quality to consider)
 │   ├── k_neighbors: int (number of recommendations)
-│   └── similarity_weights: List[float] (9D weight vector)
+│   └── similarity_weights: List[float] (7D weight vector)
 ├── PerturbationConfig
 │   ├── tight_sigma_pct: float (exploitation σ)
 │   └── broad_sigma_pct: float (exploration σ)
@@ -822,7 +832,7 @@ print(f"TTL: {config.monitoring.ttl_seconds}s")
 | Operation | Complexity | Notes |
 |-----------|-----------|-------|
 | Fingerprint computation | O(n) | n = trajectory length |
-| Similarity computation | O(1) | Fixed 9D vectors |
+| Similarity computation | O(1) | Fixed 7D vectors (euclidean distance) |
 | k-NN query | O(m log k) | m = stored episodes |
 | Perturbation generation | O(1) | Single parameter update |
 | Directory monitoring | O(1) | Event-driven |

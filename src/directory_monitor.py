@@ -93,7 +93,7 @@ class MissionEventHandler(FileSystemEventHandler):
         Initialize handler.
         
         Args:
-            on_mission_create: Callback when mission_initial.json is detected.
+            on_mission_create: Callback when mission_initial_*.json is detected.
         """
         super().__init__()
         self.on_mission_create = on_mission_create
@@ -105,8 +105,9 @@ class MissionEventHandler(FileSystemEventHandler):
         
         path = Path(event.src_path)
         
-        # Only interested in mission_initial.json files
-        if path.name == "mission_initial.json":
+        # Interested in mission_initial_*.json files (PRE-MISIÓN protocol)
+        # Supports both mission_initial.json (legacy) and mission_initial_{mission_id}.json (new)
+        if path.name.startswith("mission_initial") and path.suffix == ".json":
             logger.info(f"New mission detected: {path}")
             self.on_mission_create(path)
 
@@ -200,11 +201,11 @@ class DirectoryMonitor:
                 self.observer.schedule(handler, str(self.config.query_dir), recursive=False)
             logger.info(f"Registered query monitoring in: {self.config.query_dir}")
         
-        # Register mission handlers
+        # Register mission handlers (monitor episodic_memory for mission_initial_*.json files)
         if self.mission_handlers:
             for handler in self.mission_handlers:
-                self.observer.schedule(handler, str(self.config.query_dir), recursive=False)
-            logger.info(f"Registered mission_initial.json monitoring in: {self.config.query_dir}")
+                self.observer.schedule(handler, str(self.config.episodic_memory_dir), recursive=False)
+            logger.info(f"Registered mission_initial_*.json monitoring in: {self.config.episodic_memory_dir}")
         
         # Start observer
         self.observer.start()

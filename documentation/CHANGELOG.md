@@ -1,10 +1,10 @@
 # Episodic Improver - Implementation Changelog
 
-Complete history of implementation phases and major changes.
+**NOTA IMPORTANTE:** Este changelog documenta las 3 fases de desarrollo. El sistema **INICIAL (Phase 1)** usaba **9D fingerprinting** para análisis POST-misión. El **sistema ACTUAL (Phase 3+)** usa **7D fingerprinting geométrico** para predicción PRE-misión. Ver [DOCUMENTACION_7D.md](DOCUMENTACION_7D.md) para detalles del sistema actual.
 
 ---
 
-## Phase 1: Core Fingerprinting System (COMPLETE ✅)
+## Phase 1: Core Fingerprinting System (COMPLETE ✅) - [HISTÓRICO]
 
 **Timeline:** Initial phase  
 **Status:** Production-ready | **Tests:** 23/23 passing ✅  

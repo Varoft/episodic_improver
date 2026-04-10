@@ -256,14 +256,18 @@ class EpisodicImproverComponent:
     
     def _on_mission_initial_detected(self, mission_path: Path) -> None:
         """
-        Callback when mission_initial.json is detected (MISIÓN INICIANDO).
+        Callback when mission_initial*.json is detected (PRE-MISIÓN).
         
-        Detects mission start and applies 7D prediction to control parameters.
+        [PHASE 1] Detects mission start event and generates 7D parameter predictions.
+        - Extracts mission specification (geometry, obstacles)
+        - Uses 7D fingerprinting to find similar historical missions
+        - Generates predicted control parameters based on best match
+        - Saves predictions for SLAMO to consume
         
         Args:
-            mission_path: Path to mission_initial.json file.
+            mission_path: Path to mission_initial*.json file.
         """
-        logger.info(f"Mission starting: {mission_path.name}")
+        logger.info(f"→ [PRE-MISIÓN] Mission initial file detected: {mission_path.name}")
         
         try:
             # Load mission initial data
@@ -282,46 +286,66 @@ class EpisodicImproverComponent:
                 obstacle_density=mission_data.get("obstacle_density", 0.0),
             )
             
-            logger.info(f"Applying 7D prediction for {mission_id}...")
+            logger.info(
+                f"  Mission spec: ({mission_spec.start_x:.1f}, {mission_spec.start_y:.1f}) "
+                f"→ ({mission_spec.end_x:.1f}, {mission_spec.end_y:.1f}), "
+                f"obstacle_density={mission_spec.obstacle_density:.2f}"
+            )
             
-            # Generate 7D recommendations (PRE-MISIÓN)
-            if self.use_7d_system:
-                prediction = self.engine.generate_recommendations_7d(
-                    query_id=mission_id,
-                    mission_spec=mission_spec
+            # [PRE-MISIÓN] Generate 7D predictions
+            if not self.use_7d_system:
+                logger.warning("⚠ 7D system not available, using default parameters")
+                return
+            
+            logger.info(f"  Generating 7D predictions...")
+            prediction = self.engine.generate_recommendations_7d(
+                query_id=mission_id,
+                mission_spec=mission_spec
+            )
+            
+            if prediction.get('status') not in ['ready', 'success']:
+                logger.warning(
+                    f"✗ 7D prediction failed: {prediction.get('status')}"
                 )
-                
-                if prediction.get('status') == 'success':
-                    # Extract predicted control parameters
-                    predicted_params = prediction.get('predicted_parameters', {})
-                    best_match_id = prediction.get('best_match_id', 'unknown')
-                    similarity = prediction.get('best_match_similarity', 0.0)
-                    
-                    # Update mission_initial.json with predicted parameters
-                    mission_data['control_params'] = predicted_params
-                    mission_data['predicted_from_episode'] = best_match_id
-                    mission_data['similarity_score'] = similarity
-                    
-                    # Save updated mission file
-                    with open(mission_path, 'w') as f:
-                        json.dump(mission_data, f, indent=2)
-                    
-                    logger.info(
-                        f"✓ 7D prediction applied:\n"
-                        f"  Best match: {best_match_id}\n"
-                        f"  Similarity: {similarity:.1%}\n"
-                        f"  Params file updated: {mission_path.name}"
-                    )
-                else:
-                    logger.warning(
-                        f"7D prediction failed ({prediction.get('status')}), "
-                        f"mission will use default parameters"
-                    )
-            else:
-                logger.warning("7D system not available, using default parameters")
+                return
+            
+            # Extract prediction details from 7D engine response
+            best_match_id = prediction.get('best_match_id', 'unknown')
+            best_match_similarity = prediction.get('best_match_similarity', 0.0)
+            predicted_params = prediction.get('predicted_parameters', {})
+            fingerprint_7d = prediction.get('fingerprint_7d', [])
+            search_results = prediction.get('search_results', [])
+            
+            # Create output predictions document (PROTOCOL)
+            predictions_output = {
+                "mission_id": mission_id,
+                "timestamp_ms": int(time.time() * 1000),
+                "status": "ready",
+                "fingerprint_7d": fingerprint_7d,
+                "best_match_id": best_match_id,
+                "best_match_similarity": best_match_similarity,
+                "predicted_parameters": predicted_params,
+                "search_results": search_results,
+                "perturbation": prediction.get('perturbation_details', {}),
+            }
+            
+            # Save predictions file for SLAMO to consume
+            predictions_file = self.episodic_memory_dir / f"predictions_{mission_id}.json"
+            with open(predictions_file, 'w') as f:
+                json.dump(predictions_output, f, indent=2)
+            
+            logger.info(
+                f"✓ [PRE-MISIÓN] Predictions generated and saved:\n"
+                f"    Best match: {best_match_id}\n"
+                f"    Similarity: {best_match_similarity:.1%}\n"
+                f"    Predicted params: {len(predicted_params)} parameters\n"
+                f"    Output file: {predictions_file.name}"
+            )
         
+        except json.JSONDecodeError as e:
+            logger.error(f"✗ Invalid JSON in mission file {mission_path.name}: {e}")
         except Exception as e:
-            logger.error(f"✗ Failed to process mission start {mission_path.name}: {e}")
+            logger.error(f"✗ Failed to process mission initial {mission_path.name}: {e}")
             import traceback
             traceback.print_exc()
     
