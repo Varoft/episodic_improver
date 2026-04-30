@@ -1,0 +1,106 @@
+{
+  "episodes": [
+    {
+      "episode_id": "ep_1777539746246",
+      "fingerprint": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "original_params": {},
+      "efficiency_score": 0.5,
+      "safety_score": 0.5,
+      "smoothness_score": 0.5,
+      "outcome_quality": 0.5,
+      "timestamp_ms": 1777539746247
+    },
+    {
+      "episode_id": "ep_1777539746246",
+      "fingerprint": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "original_params": {},
+      "efficiency_score": 0.5,
+      "safety_score": 0.5,
+      "smoothness_score": 0.5,
+      "outcome_quality": 0.5,
+      "timestamp_ms": 1777539746256
+    },
+    {
+      "episode_id": "ep_1777539751947",
+      "fingerprint": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "original_params": {},
+      "efficiency_score": 0.5,
+      "safety_score": 0.5,
+      "smoothness_score": 0.5,
+      "outcome_quality": 0.5,
+      "timestamp_ms": 1777539751948
+    },
+    {
+      "episode_id": "ep_1777539751947",
+      "fingerprint": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "original_params": {},
+      "efficiency_score": 0.5,
+      "safety_score": 0.5,
+      "smoothness_score": 0.5,
+      "outcome_quality": 0.5,
+      "timestamp_ms": 1777539751949
+    }
+  ],
+  "similarity_weights": [
+    0.08,
+    0.08,
+    0.12,
+    0.12,
+    0.2,
+    0.1,
+    0.15,
+    0.1,
+    0.05
+  ],
+  "config": {
+    "outcome_quality_threshold": 0.7,
+    "weight_efficiency": 0.4,
+    "weight_safety": 0.35,
+    "weight_smoothness": 0.25
+  },
+  "metadata": {
+    "last_episode_count": 0,
+    "last_updated_ms": 0,
+    "episode_count": 4
+  }
+}
