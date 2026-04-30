@@ -160,7 +160,7 @@ class MissionEvaluator:
         
         Args:
             episode_id: ID de la misión que se acaba de ejecutar
-            query_fp: Fingerprint 7D de la nueva misión
+            query_fp: Fingerprint de la nueva mision
             best_match_id: ID del episodio histórico similar
             best_match_composite: Composite score del histórico
             actual_composite: Composite score de la misión actual
@@ -184,7 +184,7 @@ class MissionEvaluator:
             'perturbation': {
                 'parameter': perturbed_param
             },
-            'query_fingerprint_7d': query_fp,
+            'query_fingerprint': query_fp,
             'metadata': metadata or {}
         }
         
@@ -217,7 +217,7 @@ class MissionEvaluator:
         
         Args:
             episode_id: ID de la misión ejecutada
-            query_fp: Fingerprint 7D
+            query_fp: Fingerprint
             best_match_id: Episodio histórico similar
             best_match_composite: Score del histórico
             actual_composite: Score de esta misión
@@ -241,7 +241,7 @@ class MissionEvaluator:
             'perturbation': {
                 'parameter': perturbed_param
             },
-            'query_fingerprint_7d': query_fp,
+            'query_fingerprint': query_fp,
             'metadata': metadata or {}
         }
         

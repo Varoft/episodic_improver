@@ -1,6 +1,6 @@
 """
-FingerprintExtractor: Extrae el fingerprint 7D de datos de misión
-Responsable de: calcular f1-f7 a partir de geometría y contexto
+FingerprintExtractor: Extrae un fingerprint de 7 parametros de datos de mision.
+Responsable de: calcular f1-f7 a partir de geometria y contexto.
 """
 
 import math
@@ -9,13 +9,13 @@ from typing import Dict, List, Tuple, Optional
 
 class FingerprintExtractor:
     """
-    Extrae el fingerprint 7D (f1-f7) de los datos de una misión.
-    
-    Entrada: datos geométricos de la misión (src, target, obstáculos)
+    Extrae el fingerprint (f1-f7) de los datos de una mision.
+
+    Entrada: datos geometricos de la mision (src, target, obstaculos)
     Salida: vector [f1, f2, f3, f4, f5, f6, f7]
     """
     
-    # Constantes de normalización (deben coincidir con cálculo POST-misión)
+    # Constantes de normalizacion (deben coincidir con calculo post-mision)
     MAP_WIDTH = 80.0   # Ancho del mapa en metros
     MAP_HEIGHT = 80.0  # Altura del mapa en metros
     DIAGONAL_MAX = math.sqrt(MAP_WIDTH**2 + MAP_HEIGHT**2)  # ~113.1
@@ -24,7 +24,7 @@ class FingerprintExtractor:
     DEFAULT_TORTUOSITY = 1.0  # Si distancia < 10cm, no hay detours
     
     @staticmethod
-    def extract_7d(
+    def extract(
         src_x: float,
         src_y: float,
         target_x: float,
@@ -33,28 +33,28 @@ class FingerprintExtractor:
         estimated_distance: float
     ) -> List[float]:
         """
-        Extrae el fingerprint 7D de la geometría de una misión.
+        Extrae el fingerprint de la geometria de una mision.
         
         Args:
-            src_x: Posición X del robot (metros)
-            src_y: Posición Y del robot (metros)
+            src_x: Posicion X del robot (metros)
+            src_y: Posicion Y del robot (metros)
             target_x: Coordenada X del destino (metros)
             target_y: Coordenada Y del destino (metros)
-            obstacle_density: Densidad de obstáculos [0, 1]
+            obstacle_density: Densidad de obstaculos [0, 1]
             estimated_distance: Distancia estimada del camino (metros)
-                                 (por el planificador, ANTES de ejecutar)
+                                 (por el planificador, antes de ejecutar)
         
         Returns:
             [f1, f2, f3, f4, f5, f6, f7]
         """
         
-        # ========== f1: Posición X normalizada ==========
+        # ========== f1: Posicion X normalizada ==========
         f1_pos_x = src_x / FingerprintExtractor.MAP_WIDTH
         
-        # ========== f2: Posición Y normalizada ==========
+        # ========== f2: Posicion Y normalizada ==========
         f2_pos_y = src_y / FingerprintExtractor.MAP_HEIGHT
         
-        # ========== f3: Heading (ángulo hacia el destino) ==========
+        # ========== f3: Heading (angulo hacia el destino) ==========
         dx = target_x - src_x
         dy = target_y - src_y
         
@@ -74,14 +74,14 @@ class FingerprintExtractor:
             # Si distancia recta es muy pequeña, asumimos camino eficiente
             f5_tortuosity = FingerprintExtractor.DEFAULT_TORTUOSITY
         
-        # ========== f6: Densidad de obstáculos ==========
+        # ========== f6: Densidad de obstaculos ==========
         f6_density = max(0.0, min(1.0, obstacle_density))
         
-        # ========== f7: Complejidad (densidad × tortuosity) ==========
-        f7_complexity = f6_density * f5_tortuosity
+        # ========== f7: Densidad por tortuosity ==========
+        f7_density_tortuosity = f6_density * f5_tortuosity
         
         # Clamp f7 para evitar valores extremos
-        f7_complexity = max(0.0, min(2.0, f7_complexity))
+        f7_density_tortuosity = max(0.0, min(2.0, f7_density_tortuosity))
         
         return [
             f1_pos_x,
@@ -90,13 +90,13 @@ class FingerprintExtractor:
             f4_distance,
             f5_tortuosity,
             f6_density,
-            f7_complexity
+            f7_density_tortuosity
         ]
     
     @staticmethod
-    def extract_7d_from_dict(mission_data: Dict) -> List[float]:
+    def extract_from_dict(mission_data: Dict) -> List[float]:
         """
-        Extrae el fingerprint 7D a partir de un dict con los datos de misión.
+        Extrae el fingerprint a partir de un dict con los datos de mision.
         
         Formato esperado de mission_data:
         {
@@ -107,14 +107,14 @@ class FingerprintExtractor:
         }
         
         Args:
-            mission_data: Dict con datos de la misión
+            mission_data: Dict con datos de la mision
             
         Returns:
             [f1, f2, f3, f4, f5, f6, f7]
             
         Raises:
             KeyError si faltan campos requeridos
-            ValueError si los valores están fuera de rango
+            ValueError si los valores estan fuera de rango
         """
         
         source = mission_data.get('source', {})
@@ -127,7 +127,7 @@ class FingerprintExtractor:
         obstacle_density = mission_data.get('obstacle_density', 0.0)
         estimated_distance = mission_data.get('estimated_distance', 0.0)
         
-        return FingerprintExtractor.extract_7d(
+        return FingerprintExtractor.extract(
             src_x, src_y, target_x, target_y, obstacle_density, estimated_distance
         )
     
@@ -159,7 +159,7 @@ class FingerprintExtractor:
         if fp[4] < 0.5:
             return False
         
-        # f7: complejidad
+        # f7: densidad por tortuosity
         if not (0.0 <= fp[6] <= 2.0):
             return False
         
@@ -180,13 +180,13 @@ class FingerprintExtractor:
             return "Fingerprint inválido (no tiene 7 elementos)"
         
         descriptions = {
-            'f1_pos_x': f"X={fp[0]:.3f} ({'izq' if fp[0]<0 else 'der'})",
-            'f2_pos_y': f"Y={fp[1]:.3f} ({'abajo' if fp[1]<0 else 'arriba'})",
-            'f3_heading': f"Ángulo={fp[2]:.3f} rad",
+            'f1_pos_x': f"X={fp[0]:.3f} ({'izq' if fp[0] < 0 else 'der'})",
+            'f2_pos_y': f"Y={fp[1]:.3f} ({'abajo' if fp[1] < 0 else 'arriba'})",
+            'f3_heading': f"Angulo={fp[2]:.3f} rad",
             'f4_distance': f"Dist={fp[3]:.3f} (norm)",
             'f5_tortuosity': f"Tortuosity={fp[4]:.3f} ({fp[4]:.1%} detour)",
             'f6_density': f"Densidad={fp[5]:.3f}",
-            'f7_complexity': f"Complejidad={fp[6]:.3f}"
+            'f7_density_tortuosity': f"Densidad*Tortuosity={fp[6]:.3f}"
         }
         
         desc_str = " | ".join(descriptions.values())
@@ -205,7 +205,7 @@ if __name__ == "__main__":
     
     # Caso 1: Misión simple (robot en esquina, destino en otra)
     print("\n▶ Caso 1: Misión simple (esquina a esquina)")
-    fp1 = FingerprintExtractor.extract_7d(
+    fp1 = FingerprintExtractor.extract(
         src_x=0.0,
         src_y=0.0,
         target_x=80.0,
@@ -219,7 +219,7 @@ if __name__ == "__main__":
     
     # Caso 2: Misión con muchos desvíos
     print("\n▶ Caso 2: Misión con muchos desvíos")
-    fp2 = FingerprintExtractor.extract_7d(
+    fp2 = FingerprintExtractor.extract(
         src_x=20.0,
         src_y=20.0,
         target_x=60.0,
@@ -239,7 +239,7 @@ if __name__ == "__main__":
         'obstacle_density': 0.45,
         'estimated_distance': 55.0
     }
-    fp3 = FingerprintExtractor.extract_7d_from_dict(mission_dict)
+    fp3 = FingerprintExtractor.extract_from_dict(mission_dict)
     print(f"  FP: {[f'{f:.3f}' for f in fp3]}")
     print(f"  Descripción: {FingerprintExtractor.describe_fingerprint(fp3)}")
     

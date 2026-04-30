@@ -38,15 +38,13 @@ logger = logging.getLogger(__name__)
 try:
     from .config_manager import ConfigManager
     from .directory_monitor import DirectoryMonitor, MonitorConfig
-    from .episodic_improver import MissionSpec
+    from .episodic_improver import EpisodicImprover
     from .fingerprint_extractor import FingerprintExtractor
-    from .recommendation_engine import RecommendationEngine, RecommendationEngineConfig
 except ImportError:
     from config_manager import ConfigManager
     from directory_monitor import DirectoryMonitor, MonitorConfig
-    from episodic_improver import MissionSpec
+    from episodic_improver import EpisodicImprover
     from fingerprint_extractor import FingerprintExtractor
-    from recommendation_engine import RecommendationEngine, RecommendationEngineConfig
 
 
 class SpecificWorker(GenericWorker):
@@ -55,7 +53,7 @@ class SpecificWorker(GenericWorker):
         self.Period = configData["Period"]["Compute"]
         self._monitor = None
         self._processed_dir = None
-        self._engine = None
+        self._improver = None
         self._index_path = None
         self._fingerprint_extractor = FingerprintExtractor()
         self._setup_monitoring()
@@ -79,31 +77,25 @@ class SpecificWorker(GenericWorker):
         self._processed_dir = episodic_memory_dir / "processed"
         self._processed_dir.mkdir(parents=True, exist_ok=True)
 
-        self._index_path = episodic_memory_dir / "fingerprints_index_unified_7d.json"
-        legacy_index = Path("episodic_memory_7d_legacy") / "fingerprints_index_unified_7d.json"
+        self._index_path = episodic_memory_dir / "index.json"
+        legacy_root = Path("episodic_memory_legacy")
+        legacy_index = legacy_root / "index.json"
 
         if not self._index_path.exists() and legacy_index.exists():
             self._index_path.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(legacy_index, self._index_path)
             logger.info(f"Copied legacy index to {self._index_path}")
 
-        engine_config = RecommendationEngineConfig(
-            fingerprint_index_path=None,
-            outcome_quality_threshold=config.fingerprint.outcome_quality_threshold,
-            k_neighbors=config.fingerprint.k_neighbors,
-        )
-        self._engine = RecommendationEngine(engine_config)
-
         if not self._index_path.exists():
-            logger.error(f"7D index not found at {self._index_path}")
+            logger.error(f"Index not found at {self._index_path}")
         else:
-            enabled = self._engine.enable_7d_system(self._index_path)
-            if not enabled:
-                logger.error("7D system failed to initialize")
-            else:
-                legacy_root = Path("episodic_memory_7d_legacy")
-                if legacy_root.exists():
-                    self._engine.improver_7d.index_manager.set_base_dir(legacy_root)
+            log_path = episodic_memory_dir / "learning_log.json"
+            self._improver = EpisodicImprover(
+                index_path=str(self._index_path),
+                learning_log_path=str(log_path)
+            )
+            if legacy_root.exists():
+                self._improver.index_manager.set_base_dir(legacy_root)
 
         monitor_config = MonitorConfig(
             episodic_memory_dir=episodic_memory_dir,
@@ -153,8 +145,8 @@ class SpecificWorker(GenericWorker):
         return bool(prediction and prediction.get("status") == "ready")
 
     def _handle_start_episode(self, episode_path: Path, episode_data: dict) -> None:
-        if not self._engine or not self._engine.improver_7d:
-            logger.warning("7D system not ready, skipping prediction")
+        if not self._improver:
+            logger.warning("System not ready, skipping prediction")
             return
 
         source = episode_data.get("source", {})
@@ -171,19 +163,17 @@ class SpecificWorker(GenericWorker):
         straight_dist = (dx ** 2 + dy ** 2) ** 0.5
         estimated_distance = episode_data.get("estimated_distance", straight_dist)
 
-        mission_spec = MissionSpec(
-            start_x=src_x,
-            start_y=src_y,
-            end_x=target_x,
-            end_y=target_y,
-            estimated_distance=estimated_distance,
+        query_id = episode_data.get("episode_id", episode_path.stem)
+        prediction = self._improver.pre_mission_prediction(
+            src_x=src_x,
+            src_y=src_y,
+            target_x=target_x,
+            target_y=target_y,
             obstacle_density=obstacle_density,
+            estimated_distance=estimated_distance
         )
 
-        query_id = episode_data.get("episode_id", episode_path.stem)
-        prediction = self._engine.generate_recommendations_7d(query_id, mission_spec)
-
-        if prediction.get("status") != "success":
+        if prediction.get("status") != "ready":
             logger.warning(f"Prediction failed for {episode_path.name}: {prediction.get('status')}")
             return
 
@@ -192,10 +182,10 @@ class SpecificWorker(GenericWorker):
             "timestamp_ms": int(time.time() * 1000),
             "best_match_id": prediction.get("best_match_id"),
             "best_match_similarity": prediction.get("best_match_similarity"),
-            "fingerprint_7d": prediction.get("fingerprint_7d", []),
-            "predicted_params": prediction.get("predicted_parameters", {}),
-            "search_results": prediction.get("recommendations", []),
-            "perturbation": prediction.get("perturbation_details", {})
+            "fingerprint": prediction.get("fingerprint", []),
+            "predicted_params": prediction.get("predicted_params", {}),
+            "search_results": prediction.get("search_results", []),
+            "perturbation": prediction.get("perturbation", {})
         }
 
         try:
@@ -206,8 +196,8 @@ class SpecificWorker(GenericWorker):
             logger.error(f"Failed to update {episode_path.name}: {e}")
 
     def _handle_completed_episode(self, episode_path: Path, episode_data: dict) -> None:
-        if not self._engine or not self._engine.improver_7d:
-            logger.warning("7D system not ready, skipping post-mission evaluation")
+        if not self._improver:
+            logger.warning("System not ready, skipping post-mission evaluation")
             return
 
         outcome = episode_data.get("outcome", {})
@@ -220,9 +210,10 @@ class SpecificWorker(GenericWorker):
             "composite_score": outcome.get("composite_score")
         }
 
-        self._engine.post_mission_evaluation_7d(mission_outcome)
+        episode_id = episode_data.get("episode_id", episode_path.stem)
+        self._improver.post_mission_evaluation(mission_outcome, episode_id=episode_id)
 
-        fp_raw = self._fingerprint_extractor.extract_7d_from_dict({
+        fp_raw = self._fingerprint_extractor.extract_from_dict({
             "source": {
                 "x": episode_data.get("source", {}).get("x", 0.0),
                 "y": episode_data.get("source", {}).get("y", 0.0)
@@ -239,14 +230,14 @@ class SpecificWorker(GenericWorker):
         })
 
         index_entry = {
-            "episode_id": episode_data.get("episode_id", episode_path.stem),
-            "fingerprint_7d": fp_raw,
+            "episode_id": episode_id,
+            "fingerprint": fp_raw,
             "distance_traveled_m": episode_data.get("trajectory", {}).get("distance_traveled_m"),
             "params_snapshot": episode_data.get("params_snapshot", {}),
             "outcome": outcome
         }
 
-        index_manager = self._engine.improver_7d.index_manager
+        index_manager = self._improver.index_manager
         index_manager.add_episode_entry(index_entry, episode_path, folder_name="runtime")
         index_manager.save_index(str(self._index_path))
 
