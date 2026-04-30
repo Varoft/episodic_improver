@@ -33,6 +33,7 @@ class Index7DManager:
         self.index_data = None
         self.episodes_flat = []  # Lista plana para búsqueda
         self.metadata = {}
+        self.base_dir = self.index_path.parent
         
         # Pesos por defecto (usuario configurable)
         self.weights = weights or [
@@ -60,6 +61,10 @@ class Index7DManager:
         
         # Extraer metadata (está en raíz, no dentro de metadata)
         self.metadata = self.index_data.get('metadata', {})
+        base_path = self.index_data.get('base')
+        if base_path:
+            base_path_obj = Path(base_path)
+            self.base_dir = (self.index_path.parent / base_path_obj).resolve()
         means = self.index_data.get('means', [0.0] * 7)
         stds = self.index_data.get('stds', [1.0] * 7)
         
@@ -88,6 +93,94 @@ class Index7DManager:
                 self.episodes_flat.append(ep)
         
         print(f"✓ Lista plana construida: {len(self.episodes_flat)} episodios indexados")
+
+    def save_index(self, output_path: Optional[str] = None) -> None:
+        """Guarda el índice actualizado a disco."""
+        target_path = Path(output_path) if output_path else self.index_path
+        with open(target_path, 'w') as f:
+            json.dump(self.index_data, f, indent=2)
+
+    def get_episode_record(self, episode_id: str) -> Optional[Dict]:
+        """Devuelve el registro del índice para un episodio específico."""
+        for ep in self.episodes_flat:
+            if ep.get('episode_id') == episode_id:
+                return ep
+        return None
+
+    def get_episode_file_path(self, episode_id: str) -> Optional[Path]:
+        """Obtiene la ruta al archivo JSON de un episodio desde el índice."""
+        ep = self.get_episode_record(episode_id)
+        if not ep:
+            return None
+
+        base_dir = self.base_dir
+        abs_path = ep.get('abs_path')
+        rel_path = ep.get('file')
+
+        if abs_path:
+            abs_path_obj = Path(abs_path)
+            if abs_path_obj.is_absolute():
+                return abs_path_obj
+            return (base_dir / abs_path_obj).resolve()
+        if rel_path:
+            return (base_dir / rel_path).resolve()
+
+        return None
+
+    def set_base_dir(self, base_dir: Path) -> None:
+        """Define la carpeta base para resolver rutas del índice."""
+        self.base_dir = base_dir
+
+    def load_episode_json(self, episode_id: str) -> Optional[Dict]:
+        """Carga el JSON del episodio desde el path almacenado en el índice."""
+        episode_path = self.get_episode_file_path(episode_id)
+        if not episode_path:
+            return None
+
+        try:
+            with open(episode_path, 'r') as f:
+                return json.load(f)
+        except (OSError, json.JSONDecodeError):
+            return None
+
+    def add_episode_entry(
+        self,
+        episode_data: Dict,
+        episode_path: Path,
+        folder_name: str = "runtime",
+        category: str = "unknown"
+    ) -> None:
+        """Agrega un episodio nuevo al índice y actualiza la lista plana."""
+        self.metadata = self.index_data.setdefault("metadata", self.metadata or {})
+        fp = episode_data.get('fingerprint_7d')
+        if not fp or len(fp) != 7:
+            raise ValueError("fingerprint_7d inválido o ausente")
+
+        fp_norm = self.normalize_fingerprint(fp)
+        try:
+            rel_path = episode_path.relative_to(self.index_path.parent)
+        except ValueError:
+            rel_path = episode_path
+
+        entry = {
+            "file": str(rel_path),
+            "abs_path": str(rel_path),
+            "fingerprint_7d": fp,
+            "distance_traveled_m": episode_data.get("distance_traveled_m"),
+            "episode_id": episode_data.get("episode_id"),
+            "category": category,
+            "fingerprint_norm": fp_norm,
+            "params_snapshot": episode_data.get("params_snapshot", {}),
+            "outcome": episode_data.get("outcome", {})
+        }
+
+        folders = self.index_data.setdefault("folders", {})
+        folders.setdefault(folder_name, []).append(entry)
+
+        total_items = self.metadata.get("total_items", 0)
+        self.metadata["total_items"] = total_items + 1
+
+        self._build_flat_episodes_list()
     
     def normalize_fingerprint(self, fp_raw: List[float]) -> List[float]:
         """
@@ -199,7 +292,8 @@ class Index7DManager:
                 'fingerprint_7d': ep.get('fingerprint_7d'),
                 'distance_traveled_m': ep.get('distance_traveled_m'),
                 'weighted_distance': dist,
-                'similarity_score': similarity
+                'similarity_score': similarity,
+                'composite_score': (ep.get('outcome') or {}).get('composite_score')
             })
         
         return results

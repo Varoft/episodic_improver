@@ -7,10 +7,16 @@ from typing import Dict, List, Optional, Tuple
 from pathlib import Path
 import json
 
-from index_7d_manager import Index7DManager
-from fingerprint_extractor import FingerprintExtractor
-from parameter_perturbation import ParameterPerturbation
-from mission_evaluator import MissionEvaluator
+try:
+    from .index_7d_manager import Index7DManager
+    from .fingerprint_extractor import FingerprintExtractor
+    from .parameter_perturbation import ParameterPerturbation
+    from .mission_evaluator import MissionEvaluator
+except ImportError:
+    from index_7d_manager import Index7DManager
+    from fingerprint_extractor import FingerprintExtractor
+    from parameter_perturbation import ParameterPerturbation
+    from mission_evaluator import MissionEvaluator
 
 
 class EpisodicImprover7D:
@@ -119,17 +125,19 @@ class EpisodicImprover7D:
             best_match = search_results[0]
             self.last_best_match = best_match
             
-            # Obtener parámetros del histórico (estos están parcialmente en el índice)
-            # Para esta prueba, usaremos parámetros de ejemplo
-            # En producción, se cargarían desde los archivos JSON individuales
-            best_match_params = {
-                'base_speed': 0.35,
-                'max_adv_speed': 0.75,
-                'angular_velocity': 0.95,
-                'angular_acceleration': 1.5,
-                'accel_limit': 0.25,
-                'decel_limit': 0.30,
-            }
+            # Cargar parámetros reales desde el episodio histórico
+            episode_json = self.index_manager.load_episode_json(best_match['episode_id'])
+            if not episode_json:
+                raise RuntimeError(f"No se pudo cargar el episodio {best_match['episode_id']}")
+
+            best_match_params = episode_json.get('params_snapshot', {})
+            if not best_match_params:
+                raise RuntimeError(
+                    f"params_snapshot vacío en {best_match['episode_id']}"
+                )
+
+            best_match_outcome = episode_json.get('outcome', {})
+            best_match_composite = best_match_outcome.get('composite_score')
             
             # 4. Perturbar parámetros
             perturbed_params, param_name, sigma = self.parameter_perturbator.create_perturbed_params(
@@ -149,7 +157,7 @@ class EpisodicImprover7D:
                 'fingerprint_7d': fp_raw,
                 'best_match_id': best_match['episode_id'],
                 'best_match_similarity': best_match['similarity_score'],
-                'best_match_composite_score': best_match.get('composite_score', None),
+                'best_match_composite_score': best_match_composite,
                 'predicted_params': perturbed_params,
                 'perturbation': {
                     'parameter': param_name,

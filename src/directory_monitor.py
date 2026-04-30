@@ -31,32 +31,41 @@ class MonitorConfig:
     recommendations_dir: Path   # Directory for recommendations output
     ttl_seconds: int = 300      # TTL for orphaned recommendation files (5 min)
     cleanup_interval_seconds: int = 60  # How often to cleanup (1 min)
+    recursive_watch: bool = False       # Whether to watch subdirectories
 
 
 class EpisodeEventHandler(FileSystemEventHandler):
-    """Handles file events in episodic memory directories."""
-    
-    def __init__(self, on_episode_create: Callable[[Path], None]):
+    """Handles file events for ep_*.json files."""
+
+    def __init__(self, on_episode_change: Callable[[Path], None]):
         """
         Initialize handler.
-        
+
         Args:
-            on_episode_create: Callback when new episode JSON is detected.
+            on_episode_change: Callback when ep_*.json is created or modified.
         """
         super().__init__()
-        self.on_episode_create = on_episode_create
-    
+        self.on_episode_change = on_episode_change
+
     def on_created(self, event: FileCreatedEvent) -> None:
         """Handle file creation events."""
         if event.is_directory:
             return
-        
+
         path = Path(event.src_path)
-        
-        # Only interested in JSON episode files
         if path.suffix == ".json" and path.name.startswith("ep_"):
             logger.info(f"New episode detected: {path.name}")
-            self.on_episode_create(path)
+            self.on_episode_change(path)
+
+    def on_modified(self, event: FileCreatedEvent) -> None:
+        """Handle file modification events."""
+        if event.is_directory:
+            return
+
+        path = Path(event.src_path)
+        if path.suffix == ".json" and path.name.startswith("ep_"):
+            logger.info(f"Episode updated: {path.name}")
+            self.on_episode_change(path)
 
 
 class QueryEventHandler(FileSystemEventHandler):
@@ -146,10 +155,10 @@ class DirectoryMonitor:
     
     def register_episode_callback(self, callback: Callable[[Path], None]) -> None:
         """
-        Register callback for new episodes.
-        
+        Register callback for ep_*.json changes.
+
         Args:
-            callback: Function(path: Path) called when episode detected.
+            callback: Function(path: Path) called when episode detected or updated.
         """
         handler = EpisodeEventHandler(callback)
         self.episode_handlers.append(handler)
@@ -181,18 +190,18 @@ class DirectoryMonitor:
         self.config.query_dir.mkdir(parents=True, exist_ok=True)
         self.config.recommendations_dir.mkdir(parents=True, exist_ok=True)
         
-        # Register episode handlers recursively for episodic_memory_dir
-        # This watches all subdirectories for episode files
+        # Register episode handlers for ep_*.json in episodic_memory_dir
         if self.episode_handlers:
             for handler in self.episode_handlers:
                 self.observer.schedule(
                     handler,
                     str(self.config.episodic_memory_dir),
-                    recursive=True
+                    recursive=self.config.recursive_watch
                 )
+            mode = "recursive" if self.config.recursive_watch else "non-recursive"
             logger.info(
                 f"Registered episode monitoring for: "
-                f"{self.config.episodic_memory_dir} (recursive)"
+                f"{self.config.episodic_memory_dir} ({mode})"
             )
         
         # Register query handlers
