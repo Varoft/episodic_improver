@@ -1,24 +1,24 @@
 #!/usr/bin/env python3
 """
-Build unified 7D fingerprint index from all 5 episodic memory folders.
+Build unified fingerprint index from all episodic memory folders.
 
-Elimina los antiguos índices 5D y genera un único JSON con todos los descriptores
-organizados por carpeta, con estadísticas globales de normalización.
+Elimina los antiguos indices 5D y genera un unico JSON con todos los descriptores
+organizados por carpeta, con estadisticas globales de normalizacion.
 
 Uso:
-  python3 build_unified_7d_index.py <episodic_memory_path>
+    python3 build_index.py <episodic_memory_path>
 
 Resultado:
-  fingerprints_index_unified_7d.json
-    ├── metadata
-    ├── means: [7 valores] (desde todos los episodios)
-    ├── stds: [7 valores] (desde todos los episodios)
-    └── folders:
-        ├── beta_final: [items...]
-        ├── abajo_medio: [items...]
-        ├── beta_inicio: [items...]
-        ├── inicio_fin_pasillo: [items...]
-        └── medio_arriba: [items...]
+    index.json
+        ├── metadata
+        ├── means: [7 valores] (desde todos los episodios)
+        ├── stds: [7 valores] (desde todos los episodios)
+        └── folders:
+                ├── beta_final: [items...]
+                ├── abajo_medio: [items...]
+                ├── beta_inicio: [items...]
+                ├── inicio_fin_pasillo: [items...]
+                └── medio_arriba: [items...]
 """
 
 import json
@@ -38,8 +38,8 @@ def safe_get(d: Dict, *keys, default=None):
     return cur
 
 
-def extract_fingerprint_7d(data: Dict) -> Tuple[List[float], float]:
-    """Extract 7D fingerprint"""
+def extract_fingerprint(data: Dict) -> Tuple[List[float], float]:
+    """Extract fingerprint"""
     src_x = safe_get(data, 'source', 'x')
     src_y = safe_get(data, 'source', 'y')
     tgt_x = safe_get(data, 'target', 'target_x')
@@ -84,13 +84,13 @@ def extract_fingerprint_7d(data: Dict) -> Tuple[List[float], float]:
     # f7: density × tortuosity
     f7 = density * f5
     
-    fingerprint_7d = [f1, f2, f3, f4, f5, f6, f7]
+    fingerprint = [f1, f2, f3, f4, f5, f6, f7]
     
     dist_traveled = safe_get(data, 'trajectory', 'distance_traveled_m', default=None)
     if dist_traveled is not None:
         dist_traveled = float(dist_traveled)
     
-    return fingerprint_7d, dist_traveled
+    return fingerprint, dist_traveled
 
 
 def find_episodes_in_folder(folder_path: str) -> List[Tuple[str, str]]:
@@ -108,8 +108,8 @@ def find_episodes_in_folder(folder_path: str) -> List[Tuple[str, str]]:
     return sorted(episodes)
 
 
-def build_unified_7d_index(episodic_memory_path: str, output_file: str):
-    """Build unified 7D index from 5 folders"""
+def build_index(episodic_memory_path: str, output_file: str):
+    """Build unified index from folders"""
     
     # List of folders to process (excluding 'old' and 'scripts')
     folders_to_process = [
@@ -121,11 +121,11 @@ def build_unified_7d_index(episodic_memory_path: str, output_file: str):
     ]
     
     # Collect all fingerprints globally
-    all_fingerprints_7d = []
+    all_fingerprints = []
     folders_data = {}
     
     print("=" * 60)
-    print("Building 7D Unified Index")
+    print("Building Unified Index")
     print("=" * 60)
     
     # Phase 1: Extract fingerprints from all folders
@@ -134,7 +134,7 @@ def build_unified_7d_index(episodic_memory_path: str, output_file: str):
         folder_path = os.path.join(episodic_memory_path, folder_name)
         
         if not os.path.isdir(folder_path):
-            print(f"⚠ Carpeta no encontrada: {folder_path}")
+            print(f"Warning: carpeta no encontrada: {folder_path}")
             continue
         
         print(f"\nProcessando: {folder_name}/")
@@ -146,19 +146,19 @@ def build_unified_7d_index(episodic_memory_path: str, output_file: str):
                 with open(filepath, 'r') as f:
                     episode_data = json.load(f)
                 
-                fp_7d, dist_traveled = extract_fingerprint_7d(episode_data)
-                all_fingerprints_7d.append(fp_7d)
+                fp, dist_traveled = extract_fingerprint(episode_data)
+                all_fingerprints.append(fp)
                 
                 items.append({
                     'file': os.path.relpath(filepath, folder_path),
                     'abs_path': filepath,
-                    'fingerprint_7d': fp_7d,
+                    'fingerprint': fp,
                     'distance_traveled_m': dist_traveled,
                     'episode_id': episode_data.get('episode_id'),
                     'category': subdir  # 'ida' o 'vuelta'
                 })
             except Exception as e:
-                print(f"  ⚠ Error en {filepath}: {e}", file=sys.stderr)
+                print(f"  Warning: error en {filepath}: {e}", file=sys.stderr)
         
         folders_data[folder_name] = items
         total_items += len(items)
@@ -169,13 +169,13 @@ def build_unified_7d_index(episodic_memory_path: str, output_file: str):
     print(f"{'=' * 60}\n")
     
     # Phase 2: Calculate global means and stds (7D)
-    if all_fingerprints_7d:
+    if all_fingerprints:
         dims = 7
         sums = [0.0] * dims
         sums2 = [0.0] * dims
-        n = len(all_fingerprints_7d)
+        n = len(all_fingerprints)
         
-        for fp in all_fingerprints_7d:
+        for fp in all_fingerprints:
             for i in range(dims):
                 v = fp[i]
                 sums[i] += v
@@ -187,7 +187,7 @@ def build_unified_7d_index(episodic_memory_path: str, output_file: str):
         means = [0.0] * 7
         stds = [1.0] * 7
     
-    print("Estadísticas globales (7D):")
+    print("Estadisticas globales:")
     print(f"  Means: {[round(m, 4) for m in means]}")
     print(f"  Stds:  {[round(s, 4) for s in stds]}")
     
@@ -197,7 +197,7 @@ def build_unified_7d_index(episodic_memory_path: str, output_file: str):
         for item in folders_data[folder_name]:
             norm = []
             for i in range(7):
-                v = item['fingerprint_7d'][i]
+                v = item['fingerprint'][i]
                 mu = means[i]
                 sigma = stds[i]
                 if sigma > 0:
@@ -209,7 +209,7 @@ def build_unified_7d_index(episodic_memory_path: str, output_file: str):
     # Phase 4: Build output structure
     output_data = {
         'metadata': {
-            'format': '7D fingerprint (Claude recommendation)',
+            'format': 'fingerprint',
             'total_items': total_items,
             'folders_count': len(folders_data),
             'dimensions': 7,
@@ -223,32 +223,32 @@ def build_unified_7d_index(episodic_memory_path: str, output_file: str):
     # Phase 5: Save unified index
     with open(output_file, 'w') as f:
         json.dump(output_data, f, indent=2)
-    print(f"\n✓ Índice unificado guardado: {output_file}")
+    print(f"\nIndice unificado guardado: {output_file}")
     
     # Phase 6: Clean up old files
-    print("\nLimpiando índices antiguos...")
+    print("\nLimpiando indices antiguos...")
     
     # Remove fingerprints_index_unified.json (old 5D version)
     old_unified = os.path.join(episodic_memory_path, 'fingerprints_index_unified.json')
     if os.path.exists(old_unified):
         os.remove(old_unified)
-        print(f"  ✓ Eliminado: {old_unified}")
+        print(f"  Eliminado: {old_unified}")
     
     # Remove per-folder fingerprints_index.json (old 5D versions)
     for folder_name in folders_to_process:
         old_index = os.path.join(episodic_memory_path, folder_name, 'fingerprints_index.json')
         if os.path.exists(old_index):
             os.remove(old_index)
-            print(f"  ✓ Eliminado: {old_index}")
+            print(f"  Eliminado: {old_index}")
     
     # Remove merge_indices.py (no longer needed)
     merge_script = os.path.join(episodic_memory_path, 'merge_indices.py')
     if os.path.exists(merge_script):
         os.remove(merge_script)
-        print(f"  ✓ Eliminado: {merge_script}")
+        print(f"  Eliminado: {merge_script}")
     
     print(f"\n{'=' * 60}")
-    print("¡Listo! Índice 7D unificado generado.")
+    print("Listo. Indice unificado generado.")
     print(f"{'=' * 60}\n")
 
 
@@ -263,8 +263,8 @@ def main(argv):
         print(f"Error: {episodic_memory_path} no es un directorio válido")
         return 1
     
-    output_file = os.path.join(episodic_memory_path, 'fingerprints_index_unified_7d.json')
-    build_unified_7d_index(episodic_memory_path, output_file)
+    output_file = os.path.join(episodic_memory_path, 'index.json')
+    build_index(episodic_memory_path, output_file)
     
     return 0
 
